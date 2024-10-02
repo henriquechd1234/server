@@ -28,12 +28,8 @@
                         $sql_query = $mysqli-> query($sql) or die ("Falha na execução". $mysqli->error);
 
             }else{
-                echo "USUARIO ou EMAIL ja existe";
-            
-            
-            
-            
-            }
+                echo ("USUARIO ou EMAIL ja existe");
+             }
             if ($sql_query  === TRUE) {
                 header('Location: login.php');
             } else {
