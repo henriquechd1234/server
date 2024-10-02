@@ -46,10 +46,10 @@
     </nav>
     <?php 
             if(isset($_GET['busca'])&& !empty($_GET['busca'])){
-                  $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
+                  $procurar = '%' . strtolower( $mysqli->real_escape_string($_GET['busca'])) . '%';
     
              // Consulta para buscar o filme pelo nome
-            $stmt = $mysqli->prepare("SELECT id, nome,descricao,foto FROM imagens WHERE nome LIKE ?");
+            $stmt = $mysqli->prepare("SELECT id, nome,descricao,foto FROM imagens WHERE LOWER(nome) LIKE ?");
             $stmt->bind_param('s', $procurar);
             $stmt->execute();
             $result = $stmt->get_result();
