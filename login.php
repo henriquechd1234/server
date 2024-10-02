@@ -45,7 +45,7 @@
 </head>
 <body>
     <div class="top-bar"> 
-        <a href="ini.php"><img src="../img/icons8-infinito-96.png" alt="logoINFINTYHUB"></a>
+        <a href="index.php"><img src="../img/icons8-infinito-96.png" alt="logoINFINTYHUB"></a>
     </div>
     <div class="login-container">
         <h2>Login</h2>
