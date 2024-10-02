@@ -22,14 +22,14 @@
         if(isset($_GET['id']) && !empty($_GET['id'])){
             $id = $_GET['id'];
         
-            $resultado = ("SELECT * FROM filmes WHERE id = '$id'");
+            $resultado = ("SELECT * FROM imagens WHERE id = '$id'");
             $query = $mysqli -> query($resultado);
         
         
             if ($row = $query -> fetch_assoc()){
                 echo '<div class="movie">';
-                echo '<img src="' . $row['caminho'] . '" alt="' . $row['filme'] . '" style="width:200px; height:auto;">';
-                echo '<h2 style="color: white";>' . $row['filme'] . '</h2>';
+                echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
+                echo '<h2 style="color: white";>' . $row['descricao'] . '</h2>';
                 echo '</div>';
             }else{
                 echo 'nenhum filme encontrado';
