@@ -18,11 +18,23 @@
             $email = $_POST['email'];
             $user = $_POST['username'];
             $senha = $_POST['password'];
+            
+            $verifica_banco="SELECT * FROM cadastro WHERE (username = '$user') or (email = '$email')";
+             $sql_q = $mysqli-> query($verifica_banco) or die ("Falha na execução". $mysqli->error);
+            $result = $sql_q -> num_rows;
+            if($result == 0){
+             
+                        $sql= "INSERT INTO cadastro (nome,email,senha,username) VALUES ('$nome','$email','$senha','$user')";
+                        $sql_query = $mysqli-> query($sql) or die ("Falha na execução". $mysqli->error);
 
-            $sql= "INSERT INTO cadastro (nome,email,senha,username) VALUES ('$nome','$email','$senha','$user')";
-            $sql_query = $mysqli-> query($sql) or die ("Falha na execução". $mysqli->error);
-
-             if ($sql_query  === TRUE) {
+            }else{
+                echo "USUARIO ou EMAIL ja existe";
+            
+            
+            
+            
+            }
+            if ($sql_query  === TRUE) {
                 header('Location: login.php');
             } else {
             echo "Erro: " . $sql . "<br>" . $conn->error;
