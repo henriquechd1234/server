@@ -33,11 +33,9 @@
             }else{
                 echo ("USUARIO ou EMAIL ja existe");
              }
-            else {
-            echo "Erro: " . $sql . "<br>" . $conn->error;
-        }
+
  
-        }
+        
 
 
     }
