@@ -25,7 +25,7 @@
         if(isset($_GET['id']) && !empty($_GET['id'])){
             $id = $_GET['id'];
         
-            $resultado = ("SELECT * FROM filmes WHERE id = '$id'");
+            $resultado = ("SELECT * FROM imagens WHERE id = '$id'");
             $query = $mysqli -> query($resultado);
         
         
