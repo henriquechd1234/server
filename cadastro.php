@@ -27,11 +27,11 @@
                         $sql= "INSERT INTO cadastro (nome,email,senha,username) VALUES ('$nome','$email','$senha','$user')";
                         $sql_query = $mysqli-> query($sql) or die ("Falha na execução". $mysqli->error);
                         if ($sql_query  === TRUE) {
-                                $error ='Location: login.php';
+                                header('Location: login.php');
                         } 
 
             }else{
-                echo ("USUARIO ou EMAIL ja existe");
+                $error[] ="USUARIO ou EMAIL ja existe";
              }
 
     }
