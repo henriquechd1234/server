@@ -100,7 +100,7 @@ body {
 }
 @media (max-width: 768px) {
   .top-ten-section .top-ten-container .top-ten-grid .movie-card {
-    max-width: 150px;
+    max-width: 120px;
   }
 }
 .top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
