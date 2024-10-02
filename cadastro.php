@@ -27,7 +27,7 @@
                         $sql= "INSERT INTO cadastro (nome,email,senha,username) VALUES ('$nome','$email','$senha','$user')";
                         $sql_query = $mysqli-> query($sql) or die ("Falha na execução". $mysqli->error);
                         if ($sql_query  === TRUE) {
-                                header('Location: login.php');
+                                $error ='Location: login.php';
                         } 
 
             }else{
@@ -54,7 +54,7 @@
 </head>
 <body>
     <div class="top-bar">
-        <img src="../img/icons8-infinito-96.png" alt="">
+       <a href="index.php"><img src="../img/icons8-infinito-96.png" alt=""></a>
     </div>
     <div class="login-container">
         <h2>Cadastro</h2>
