@@ -20,9 +20,7 @@
         <div class="logo">
             <a href="ini.php"><img src="../img/icons8-infinito-96.png" alt="RateHub Logo"></a>
         </div>
-        
         <form class="search-container"  method="GET">
-            
                 <input  type="text" placeholder="Pesquisar na Biblioteca"  id="busca" name="busca">
                 <button type="submit">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg" alt="Lupa">
@@ -72,7 +70,7 @@
             }
         }else{
         ?>
-        <hr class="espacamento">
+     <hr class="espacamento">
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
@@ -179,12 +177,7 @@
                 </div>
                 <button class="next-button">&#10095;</button> 
             </div>
-    </div>
-    <div>
-            <h2>Filmes Disponiveis</h2>
 
-
-    </div>
     <?php 
         }
     ?>
