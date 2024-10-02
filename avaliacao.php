@@ -31,8 +31,8 @@
         
             if ($row = $query -> fetch_assoc()){
                 echo '<div class="movie">';
-                echo '<img src="' . $row['caminho'] . '" alt="' . $row['filme'] . '" style="width:200px; height:auto;">';
-                echo '<h2 style="color: white";>' . $row['filme'] . '</h2>';
+                echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
+                echo '<h2 style="color: white";>' . $row['descricao'] . '</h2>';
                 echo '</div>';
             }else{
                 echo 'nenhum filme encontrado';
@@ -60,7 +60,7 @@
 
                 $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota) VALUES  ('$id_user','$avali', '$nota')";
         
-            } if ($mysqli->query($inserirAvaliacao)) {
+            } if ($mysqli->query($inserir)) {
                 echo "Avaliação enviada com sucesso!";
             } else {
                 echo "Erro ao enviar a avaliação: " . $mysqli->error;
