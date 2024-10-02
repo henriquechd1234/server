@@ -51,7 +51,7 @@
                   $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
     
              // Consulta para buscar o filme pelo nome
-            $stmt = $mysqli->prepare("SELECT id, nome,descricao,foto FROM imagens WHERE filme LIKE ?");
+            $stmt = $mysqli->prepare("SELECT id, nome,descricao,foto FROM imagens WHERE nome LIKE ?");
             $stmt->bind_param('s', $procurar);
             $stmt->execute();
             $result = $stmt->get_result();
