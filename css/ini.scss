@@ -24,7 +24,7 @@ body {
 
   .logo img {
     height: 30px;
-    
+
     margin-right: 20px;
   }
 
@@ -37,12 +37,12 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 16px;
-  
+
     &:hover {
         background-color: darken(#007BFF, 10%);
     }
   }
-  
+
   @media (max-width: 768px) {
     .login-btn {
         display: none;
@@ -61,7 +61,7 @@ body {
     }
   }
 
-  
+
   @media (min-width: 768px) {
     flex-direction: row;
 
@@ -74,9 +74,9 @@ body {
     .right-menu {
       margin-left: auto;
     }
-    
+
   }
-  
+
 }
 
 // Seccao do top 10
@@ -84,8 +84,7 @@ body {
   padding: 20px;
   background-color: $background-color;
   color: $text-color;
-
-  .top-ten-container {
+.top-ten-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -124,7 +123,7 @@ body {
         }
       }
 
-      
+
       @media (max-width: 768px) {
         .movie-card {
           max-width: 150px;
