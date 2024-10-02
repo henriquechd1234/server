@@ -11,7 +11,7 @@
             echo("Preencha o usuario");
         }else if (strlen($_POST['password'])==0){
             echo("Preencha a senha");
-        }else if (strlen($_POST['password'] > 12)){
+        }else if (strlen($_POST['password'] > 15)){
             $errors[] ="Senha maior que 12 caracteres!!!";
         }else{
 
