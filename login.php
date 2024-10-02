@@ -23,7 +23,7 @@
                 $_SESSION['id']= $an ['id'];
                 $_SESSION['username']= $an ['id'];
 
-                header("Location: ini.php");
+                header("Location: index.php");
             }
         }
     }
