@@ -1,0 +1,205 @@
+$background-color: #141313;
+$text-color: white;
+$input-background: #f9f9f9;
+$input-border: #ccc;
+$button-hover-bg: #777;
+$focus-color: #007BFF;
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $background-color;
+  padding: 10px 20px;
+  color: $text-color;
+
+  .logo img {
+    height: 30px;
+    
+    margin-right: 20px;
+  }
+
+  .login-btn {
+    background-color: #3a3030cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  
+    &:hover {
+        background-color: darken(#007BFF, 10%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-btn {
+        display: none;
+    }
+  }
+
+  .search-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    .search-container {
+      width: auto;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+
+    .right-menu {
+      margin-left: auto;
+    }
+    
+  }
+  
+}
+
+// Seccao do top 10
+.top-ten-section {
+  padding: 20px;
+  background-color: $background-color;
+  color: $text-color;
+
+  .top-ten-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .top-ten-grid {
+      display: flex;
+      gap: 10px;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+
+      .movie-card {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 10px;
+        text-align: center;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .movie-info {
+          margin-top: 10px;
+
+          h3 {
+            font-size: 16px;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+
+      
+      @media (max-width: 768px) {
+        .movie-card {
+          max-width: 150px;
+        }
+      }
+    }
+
+    .prev-button, .next-button {
+      display: none; 
+    }
+
+    @media (min-width: 768px) {
+      .prev-button, .next-button {
+        display: block;
+      }
+    }
+  }
+}
+
+.espacamento {
+  border: none;
+  height: 2px;
+  background-color: $text-color;
+  margin: 10px 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid $input-border;
+  border-radius: 25px;
+  padding: 5px 10px;
+  max-width: 300px;
+  background-color: $input-background;
+
+  input[type="text"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .top-ten-section {
+    padding: 10px;
+  }
+
+  .movie-card {
+    max-width: 120px;
+    img {
+      max-height: 150px;
+    }
+  }
+}
+
+
+
+
+
