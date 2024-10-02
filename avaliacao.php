@@ -59,8 +59,9 @@
 
 
                 $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota) VALUES  ('$id_user','$avali', '$nota')";
+                $envio = $mysqli -> query($inserir);
         
-            } if ($mysqli->query($inserir)) {
+            } if ($emvio == TRUE) {
                 echo "Avaliação enviada com sucesso!";
             } else {
                 echo "Erro ao enviar a avaliação: " . $mysqli->error;
