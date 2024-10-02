@@ -34,12 +34,8 @@
                 echo ("USUARIO ou EMAIL ja existe");
              }
 
- 
-        
-
-
     }
-
+    }
 
 ?>
 
