@@ -37,7 +37,7 @@
             if ($_SESSION == TRUE){
 
                 echo  '<div class="loginstyle">';
-             echo  ('<a style="text-decoration: none; color: aliceblue;" href="desconectar.php"><span>Sair</span></a>');
+             echo  ('<a href="desconectar.php"><span>Sair</span></a>');
          
             }else{
                 echo('<a style="text-decoration: none; color: aliceblue;" href="login.php">Login</a>');
