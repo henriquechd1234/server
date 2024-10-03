@@ -11,13 +11,13 @@ if(!isset($_SESSION)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coringa: Delírio a Dois - Página do Filme</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../design/css/ini.css">
+    <link rel="stylesheet" href="css/ini.css">
 </head>>
 
 <body>
 <nav class="navbar">
         <div class="logo">
-            <a href="ini.php"><img src="../design/img/icons8-infinito-96.png" alt="RateHub Logo"></a>
+            <a href="ini.php"><img src="img/icons8-infinito-96.png" alt="RateHub Logo"></a>
         </div>
         <form class="search-container" method="GET">
             <input type="text" placeholder="Pesquisar na Biblioteca" id="busca" name="busca">
