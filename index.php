@@ -35,14 +35,16 @@
              session_start();
             }
             if ($_SESSION == TRUE){
-
-                echo  '<div class="login-btn">';
+                
+                 echo  '<div class="login-btn">';
+                echo  '<div>';
              echo  ('<a href="desconectar.php"><span>Sair</span></a>');
          
             }else{
                 echo('<a href="cadastro.php"><span>Cadastre-se!</span></a>');
             }
-               echo '</div>';
+               echo '</div>';    
+            echo '</div>';
         ?>
            
     </nav>
