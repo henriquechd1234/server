@@ -11,13 +11,13 @@ if(!isset($_SESSION)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coringa: Delírio a Dois - Página do Filme</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/ini.css">
-</head>
+    <link rel="stylesheet" href="../design/css/ini.css">
+</head>>
 
 <body>
 <nav class="navbar">
         <div class="logo">
-            <a href="index.php"><img src="img/icons8-infinito-96.png" alt="RateHub Logo"></a>
+            <a href="ini.php"><img src="../design/img/icons8-infinito-96.png" alt="RateHub Logo"></a>
         </div>
         <form class="search-container" method="GET">
             <input type="text" placeholder="Pesquisar na Biblioteca" id="busca" name="busca">
@@ -38,7 +38,6 @@ if(!isset($_SESSION)){
             if ($row = $query->fetch_assoc()) {
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
-             echo '<h2 style="color: white;">' . $row['descricao'] . '</h2>';
              echo '<div class="rating">';
              echo '<span>⭐ 5,7/10</span>';
              echo '<p>4,8 mil avaliações</p>';
@@ -47,6 +46,9 @@ if(!isset($_SESSION)){
              echo '<div class="movie-content">';
              echo '<div class="movie-poster">';
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
+             echo '<div class ="movie-details">';
+             echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
+             echo '</div>';
             } else {
                 echo 'nenhum filme encontrado';
             }
