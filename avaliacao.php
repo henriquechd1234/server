@@ -69,7 +69,7 @@
             $avaliacoes = "SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao 
             FROM avaliacao a 
             JOIN cadastro c ON a.cadastro_id = c.id 
-            WHERE a.imagens_id = '$id'";
+            WHERE imagens_id = '$id'";
             $queryAvaliacao = $mysqli->query($avaliacoes);
 
             if ($queryAvaliacao->num_rows > 0) {
