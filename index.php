@@ -36,11 +36,11 @@
             }
             if ($_SESSION == TRUE){
 
-                echo  '<div class="loginstyle">';
+                echo  '<div class="login-btn">';
              echo  ('<a href="desconectar.php"><span>Sair</span></a>');
          
             }else{
-                echo('<a style="text-decoration: none; color: aliceblue;" href="login.php">Login</a>');
+                echo('<a href="cadastro.php">Cadastre-se</a>');
             }
                echo '</div>';
         ?>
