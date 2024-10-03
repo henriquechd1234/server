@@ -70,7 +70,7 @@
                FROM avaliacao a 
                JOIN cadastro c ON a.cadastro_id = c.id 
                JOIN imagens i ON a.imagens_id = i.id  -- Junte a tabela de imagens
-               WHERE i.id = '$id'";  -- Filtre pela coluna correta da tabela imagens
+               WHERE i.id = '$id'"; 
             $queryAvaliacao = $mysqli->query($avaliacoes);
 
 
