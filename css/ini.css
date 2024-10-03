@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141313;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141313;
+  padding: 10px 20px;
+  color: white;
+}
+.navbar .logo img {
+  height: 30px;
+  margin-right: 20px;
+}
+.navbar .login-btn {
+  background-color: rgba(58, 48, 48, 0.7960784314);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+.navbar .login-btn:hover {
+  background-color: #0062cc;
+}
+@media (max-width: 768px) {
+  .navbar .login-btn {
+    display: none;
+  }
+}
+.navbar .search-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .search-container input[type=text] {
+  width: 100%;
+  max-width: 300px;
+}
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+  .navbar .search-container {
+    width: auto;
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+  .navbar .right-menu {
+    margin-left: auto;
+  }
+}
+
+.top-ten-section {
+  padding: 20px;
+  background-color: #141313;
+  color: white;
+}
+.top-ten-section .top-ten-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.top-ten-section .top-ten-container .top-ten-grid {
+  display: flex;
+  gap: 10px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+.top-ten-section .top-ten-container .top-ten-grid .movie-card {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  text-align: center;
+}
+.top-ten-section .top-ten-container .top-ten-grid .movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info {
+  margin-top: 10px;
+}
+.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info h3 {
+  font-size: 16px;
+}
+.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info button {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .top-ten-section .top-ten-container .top-ten-grid .movie-card {
+    max-width: 150px;
+  }
+}
+.top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
+  display: none;
+}
+@media (min-width: 768px) {
+  .top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
+    display: block;
+  }
+}
+
+.espacamento {
+  border: none;
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+}
+.search-container input[type=text] {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+}
+.search-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.search-container button img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px;
+  }
+  .top-ten-section {
+    padding: 10px;
+  }
+  .movie-card {
+    max-width: 120px;
+  }
+  .movie-card img {
+    max-height: 150px;
+  }
+}/*# sourceMappingURL=ini.css.map */
