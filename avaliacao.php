@@ -12,7 +12,7 @@ if(!isset($_SESSION)){
     <title>Coringa: Delírio a Dois - Página do Filme</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/ini.css">
-</head>>
+</head>
 
 <body>
 <nav class="navbar">
