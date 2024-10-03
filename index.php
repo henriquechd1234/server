@@ -40,7 +40,7 @@
              echo  ('<a href="desconectar.php"><span>Sair</span></a>');
          
             }else{
-                echo('<a href="cadastro.php">Cadastre-se</a>');
+                echo('<a href="cadastro.php"><span>Cadastre-se!</span></a>');
             }
                echo '</div>';
         ?>
