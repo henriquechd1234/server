@@ -67,7 +67,7 @@
                 $nota = $_POST['nota'];
 
 
-                $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES  ('$id_user','$avali', '$nota','$id'";
+                $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES  ('$id_user','$avali', '$nota','$id')";
                 $envio = $mysqli -> query($inserir);
         
             if ($envio === TRUE) {
