@@ -52,8 +52,17 @@
         </form>
         <?php 
             if(isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+                if (!isset($_SESSION['id'])) {
+                 echo "Usuário não está logado. Por favor, faça login.";
+                        exit; // Interrompe a execução do script
+                        }
+                  $id_user = $_SESSION['id'];
+                    if (!is_numeric($id_user)) {
+                    echo "ID do usuário inválido.";
+                    exit; // Interrompe a execução do script
+                        }
 
-                $id_user = $_SESSION['id'];
+                
                 $avali = $_POST['avaliacao'];
                 $nota = $_POST['nota'];
 
