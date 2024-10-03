@@ -89,7 +89,7 @@
                 echo '<div class="avaliacoes">';
                 while ($avaliacaoRow = $queryAvaliacao->fetch_assoc()) {
                     echo '<div class="avaliacao">';
-                    echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['comentario'] . '</p>';
+                    echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
                     echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
                     echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
                     echo '</div>';
