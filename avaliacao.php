@@ -66,11 +66,13 @@
             } else {
                 echo "Erro ao enviar a avaliação: " . $mysqli->error;
             }
-            $avaliacoes = "SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao 
-            FROM avaliacao a 
-            JOIN cadastro c ON a.cadastro_id = c.id 
-            WHERE imagens_id = '$id'";
+           $avaliacoes = "SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao 
+               FROM avaliacao a 
+               JOIN cadastro c ON a.cadastro_id = c.id 
+               JOIN imagens i ON a.imagens_id = i.id  -- Junte a tabela de imagens
+               WHERE i.id = '$id'";  -- Filtre pela coluna correta da tabela imagens
             $queryAvaliacao = $mysqli->query($avaliacoes);
+
 
             if ($queryAvaliacao->num_rows > 0) {
                 echo '<div class="avaliacoes">';
