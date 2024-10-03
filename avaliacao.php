@@ -85,7 +85,7 @@
             } else {
                 echo 'Nenhuma avaliação disponível para este filme.';
             }
-        
+            }
             ?>
                  
     </body>
