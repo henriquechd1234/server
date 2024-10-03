@@ -36,6 +36,7 @@ if(!isset($_SESSION)){
             $query = $mysqli->query($resultado);
 
             if ($row = $query->fetch_assoc()) {
+             echo '<div class = "container"';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
              echo '<div class="rating">';
@@ -48,6 +49,7 @@ if(!isset($_SESSION)){
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
              echo '<div class ="movie-details">';
              echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
+             echo '</div>';
              echo '</div>';
             } else {
                 echo 'nenhum filme encontrado';
