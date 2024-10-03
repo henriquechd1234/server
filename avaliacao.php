@@ -42,7 +42,7 @@
         }
         ?>
 
-        <form action="" method="$_POST">
+        <form action="" method="POST">
             <p>Avalie esse filme:</p>
             <input type="text" name="avaliacao" id="">
             <label for="nota">Nota (1 a 5):</label>
@@ -69,7 +69,7 @@
             $avaliacoes = "SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao 
             FROM avaliacao a 
             JOIN cadastro c ON a.cadastro_id = c.id 
-            WHERE a.imagens_id = '$id_imagens'";
+            WHERE a.filme_id = '$id'";
             $queryAvaliacao = $mysqli->query($avaliacoes);
 
             if ($queryAvaliacao->num_rows > 0) {
