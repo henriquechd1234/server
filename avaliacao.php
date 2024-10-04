@@ -37,7 +37,7 @@ if(!isset($_SESSION)){
                 
                 if ($row = $query->fetch_assoc()) {
              echo '<main class="content">';
-             echo '<div class = "container"';
+             echo '<div class = "container">';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
              echo '<div class="rating">';
