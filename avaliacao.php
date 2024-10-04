@@ -23,6 +23,32 @@ if(!isset($_SESSION)){
             <input type="text" placeholder="Pesquisar na Biblioteca" id="busca" name="busca">
             <button type="submit">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg" alt="Lupa">
+                <?php 
+            if(isset($_GET['busca'])&& !empty($_GET['busca'])){
+                  $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
+    
+             // Consulta para buscar o filme pelo nome
+            $stmt = $mysqli->prepare("SELECT id, nome,descricao,foto FROM imagens WHERE nome LIKE ?");
+            $stmt->bind_param('s', $procurar);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            
+                
+                
+                if( $result -> num_rows === 0 || $result == ''){
+                    echo"<p style='color: white;'>Nenhum resultado encontrado no momento </p>" ;
+                }
+                else{
+                    while ($row= $result -> fetch_assoc()){
+                        echo '<div class="movie">';
+                        echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
+                        echo '<h2 style="color: white";>' . $row['nome'] . '</h2>';
+                        echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>';
+                        echo '</div>';
+                }
+            }
+        }
+            ?>
             </button>
         </form>
     </nav>
