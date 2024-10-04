@@ -52,9 +52,8 @@ else{
         echo '</div>';
 }
 }
-}
-?>
-<?php 
+}else
+
             if (isset($_GET['id']) && !empty($_GET['id'])) {
                 $id = $_GET['id'];
                 
