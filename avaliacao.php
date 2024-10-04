@@ -28,6 +28,7 @@ if(!isset($_SESSION)){
     </nav>
     <hr class="linha">
 </header>
+<main class="content">
 <?php 
             if (isset($_GET['id']) && !empty($_GET['id'])) {
             $id = $_GET['id'];
@@ -136,5 +137,6 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     }
 }
 ?>
+</main>
 </body>
 </html>
