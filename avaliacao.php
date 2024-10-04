@@ -28,15 +28,15 @@ if(!isset($_SESSION)){
     </nav>
     <hr class="linha">
 </header>
-<main class="content">
 <?php 
             if (isset($_GET['id']) && !empty($_GET['id'])) {
-            $id = $_GET['id'];
-
-            $resultado = "SELECT * FROM imagens WHERE id = '$id'";
-            $query = $mysqli->query($resultado);
-
-            if ($row = $query->fetch_assoc()) {
+                $id = $_GET['id'];
+                
+                $resultado = "SELECT * FROM imagens WHERE id = '$id'";
+                $query = $mysqli->query($resultado);
+                
+                if ($row = $query->fetch_assoc()) {
+             echo '<main class="content">';
              echo '<div class = "container"';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
@@ -52,6 +52,7 @@ if(!isset($_SESSION)){
              echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
              echo '</div>';
              echo '</div>';
+             echo '</main>';
             } else {
                 echo 'nenhum filme encontrado';
             }
@@ -137,6 +138,5 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     }
 }
 ?>
-</main>
 </body>
 </html>
