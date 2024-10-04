@@ -36,24 +36,23 @@ if(!isset($_SESSION)){
                 $query = $mysqli->query($resultado);
                 
                 if ($row = $query->fetch_assoc()) {
-             ?> <main class="content"> 
-             <div class = "container">
-             <div class="movie-header">
-              <h1 class= "original-title"> <?php $row['nome'] ?></h1>
-              <div class="rating">
-             <span>⭐ 5,7/10</span>
-              <p>4,8 mil avaliações</p>
-              </div>
-              </div>
-              <div class="movie-content">
-             <div class="movie-poster">
-              <img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">
-              <div class ="movie-details">
-               <p class = "synopsis"> <?php $row['descricao'] ?></p>
-             </div>
-                </div>
-            </main>
-             <?php 
+             echo '<main class="content">';
+             echo '<div class = "container"';
+             echo '<div class="movie-header">';
+             echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
+             echo '<div class="rating">';
+             echo '<span>⭐ 5,7/10</span>';
+             echo '<p>4,8 mil avaliações</p>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="movie-content">';
+             echo '<div class="movie-poster">';
+             echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
+             echo '<div class ="movie-details">';
+             echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
+             echo '</div>';
+             echo '</div>';
+             echo '</main>';
             } else {
                 echo 'nenhum filme encontrado';
             }
