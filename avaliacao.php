@@ -104,22 +104,6 @@ else{
                         echo '</div>';
                     } else {
                         echo 'Nenhuma avaliação disponível para este filme.';
-                    }
-                } else {
-                    echo "ID não encontrado";
-                }
-                ?>
-   
-
-<form action="" method="POST">
-    <p>Avalie esse filme:</p>
-    <input type="text" name="avaliacao" id="">
-    <label for="nota">Nota (1 a 5):</label>
-    <input type="number" name="nota" min="1" max="5" required>
-    <button type="submit">Enviar</button>
-</form>
-
-<?php 
 if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     if (!isset($_SESSION['id'])) {
         echo "Usuário não está logado. Por favor, faça login.";
@@ -162,6 +146,21 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
         echo 'Nenhuma avaliação disponível para este filme.';
     }
 }
-?>
+                    }
+                } else {
+                    echo "ID não encontrado";
+                }
+                ?>
+   
+
+<form action="" method="POST">
+    <p>Avalie esse filme:</p>
+    <input type="text" name="avaliacao" id="">
+    <label for="nota">Nota (1 a 5):</label>
+    <input type="number" name="nota" min="1" max="5" required>
+    <button type="submit">Enviar</button>
+</form>
+
+
 </body>
 </html>
