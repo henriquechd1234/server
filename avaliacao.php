@@ -201,6 +201,6 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     text-align: center;
     text-decoration: none;
     }
-</style
+</style>
 
 </body>
