@@ -78,8 +78,15 @@ else{
              echo '</main>';
             } else {
                 echo 'nenhum filme encontrado';
-            }
+            } ?>
             
+<form action="" method="POST">
+    <p>Avalie esse filme:</p>
+    <input type="text" name="avaliacao" id="">
+    <label for="nota">Nota (1 a 5):</label>
+    <input type="number" name="nota" min="1" max="5" required>
+    <button type="submit">Enviar</button>
+</form> <?php
             // Consulta para buscar as avaliações
             $avaliacoes = "
             SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao, i.foto 
@@ -151,13 +158,6 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 ?>
    
 
-<form action="" method="POST">
-    <p>Avalie esse filme:</p>
-    <input type="text" name="avaliacao" id="">
-    <label for="nota">Nota (1 a 5):</label>
-    <input type="number" name="nota" min="1" max="5" required>
-    <button type="submit">Enviar</button>
-</form>
 
 
 </body>
