@@ -9,7 +9,7 @@ if(!isset($_SESSION)){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php $row['nome'] ?></title>
+    <title></title>
     <link rel="stylesheet" href="css/filme.css">
     <link rel="stylesheet" href="css/ini.css">
 </head>
