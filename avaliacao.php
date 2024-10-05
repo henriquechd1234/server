@@ -55,12 +55,12 @@ else{
 }
 }else if(isset($_GET['id']) && !empty($_GET['id'])) {
                 $id = $_GET['id'];
-                
+
                 $resultado = "SELECT * FROM imagens WHERE id = '$id'";
                 $query = $mysqli->query($resultado);
-                
+
            echo '<main class="content">';
-             echo '<div class = "container">';
+             echo '<div class = "container"';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
              echo '<div class="rating">';
@@ -86,7 +86,7 @@ else{
             } else {
                 echo 'nenhum filme encontrado';
             } ?>
-            
+
 <form action="" method="POST">
     <p>Avalie esse filme:</p>
     <input type="text" name="avaliacao" id="">
@@ -101,9 +101,9 @@ else{
             JOIN cadastro AS c ON a.cadastro_id = c.id 
             JOIN imagens AS i ON a.imagens_id = i.id 
             WHERE i.id = '$id'"; 
-            
+
             $queryAvaliacao = $mysqli->query($avaliacoes);
-            
+
             if ($queryAvaliacao->num_rows > 0) {
                 echo '<div class="avaliacoes">';
                     while ($avaliacaoRow = $queryAvaliacao->fetch_assoc()) {
@@ -116,7 +116,7 @@ else{
                         echo '</div>';
                     } else {
                         echo 'Nenhuma avaliação disponível para este filme.';
-            }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     if (!isset($_SESSION['id'])) {
         echo "Usuário não está logado. Por favor, faça login.";
         exit; // Interrompe a execução do script
@@ -157,11 +157,13 @@ else{
     } else {
         echo 'Nenhuma avaliação disponível para este filme.';
     }
-    }
+}
                     
-   
-?>
-   
+                } else {
+                    echo "ID não encontrado";
+                }
+                ?>
+
 
     <style>
     .movie {
@@ -199,7 +201,6 @@ else{
     text-align: center;
     text-decoration: none;
     }
-</style>
+</style
 
 </body>
-</html>
