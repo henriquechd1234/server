@@ -59,8 +59,7 @@ else{
                 $resultado = "SELECT * FROM imagens WHERE id = '$id'";
                 $query = $mysqli->query($resultado);
                 
-                if ($row = $query->fetch_assoc()) {
-             echo '<main class="content">';
+           echo '<main class="content">';
              echo '<div class = "container"';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
@@ -72,6 +71,13 @@ else{
              echo '<div class="movie-content">';
              echo '<div class="movie-poster">';
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
+             echo '</div>';
+             echo '<div class="movie-info">';
+             echo '<div class ="trailer">';
+             echo '<iframe width="560" height="315" src="'.$row ['trailer'].'"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>';
+             echo '</iframe>';
+             echo '</div>';
+             echo '</div>';
              echo '<div class ="movie-details">';
              echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
              echo '</div>';
