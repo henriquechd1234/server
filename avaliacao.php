@@ -154,16 +154,15 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             echo '</div>';
         }
         echo '</div>';
-    } else {
+    } else if {
         echo 'Nenhuma avaliação disponível para este filme.';
     }
-}
-            }
+    }
                     
-                } else {
-                    echo "ID não encontrado";
-                }
-                ?>
+    } else {
+        echo "ID não encontrado";
+    }
+?>
    
 
     <style>
