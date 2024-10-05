@@ -159,7 +159,43 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 ?>
    
 
+    <style>
+    .movie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 15px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        max-width: 250px;
+        margin-left: 70px;
+    }
 
+    .movie img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .info{
+        display: block;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    }
+</style
 
 </body>
 </html>
