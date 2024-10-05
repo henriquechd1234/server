@@ -12,6 +12,7 @@ if(!isset($_SESSION)){
     <title></title>
     <link rel="stylesheet" href="css/filme.css">
     <link rel="stylesheet" href="css/ini.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" a>
 </head>
 
 <body>
