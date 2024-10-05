@@ -116,7 +116,7 @@ else{
                         echo '</div>';
                     } else {
                         echo 'Nenhuma avaliação disponível para este filme.';
-if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+            }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     if (!isset($_SESSION['id'])) {
         echo "Usuário não está logado. Por favor, faça login.";
         exit; // Interrompe a execução do script
