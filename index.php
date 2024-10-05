@@ -158,23 +158,6 @@
                             <button>Trailer</button>
                         </div>
                     </div>
-                    <div class="movie-card">
-                        <img src="../capaFILMES/11.jpg" alt="Acima de Qualquer Suspeita">
-                        <div class="movie-info">
-                            <h3>11. Acima de Qualquer Suspeita</h3>
-                            <button>+ Lista</button>
-                            <button>Trailer</button>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="../capaFILMES/12.jpg" alt="Alien - O 8º Passageiro">
-                        <div class="movie-info">
-                            <h3>12. Alien - O 8º Passageiro</h3>
-                            <button>+ Lista</button>
-                            <button>Trailer</button>
-                        </div>
-                    </div>
-                </div>
                 <button class="next-button">&#10095;</button> 
             </div>
 
