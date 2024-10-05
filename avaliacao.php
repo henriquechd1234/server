@@ -60,7 +60,7 @@ else{
                 $query = $mysqli->query($resultado);
                 
            echo '<main class="content">';
-             echo '<div class = "container"';
+             echo '<div class = "container">';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
              echo '<div class="rating">';
@@ -158,6 +158,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
         echo 'Nenhuma avaliação disponível para este filme.';
     }
 }
+            }
                     
                 } else {
                     echo "ID não encontrado";
@@ -201,7 +202,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     text-align: center;
     text-decoration: none;
     }
-</style
+</style>
 
 </body>
 </html>
