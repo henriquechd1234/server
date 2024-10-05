@@ -52,9 +52,7 @@ else{
         echo '</div>';
 }
 }
-}else if
-
-            if (isset($_GET['id']) && !empty($_GET['id'])) {
+}else if(isset($_GET['id']) && !empty($_GET['id'])) {
                 $id = $_GET['id'];
                 
                 $resultado = "SELECT * FROM imagens WHERE id = '$id'";
