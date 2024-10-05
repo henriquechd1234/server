@@ -157,6 +157,9 @@
                             <button>+ Lista</button>
                             <button>Trailer</button>
                         </div>
+
+                    </div>
+    
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
