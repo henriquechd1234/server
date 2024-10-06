@@ -61,7 +61,7 @@ else{
                 $query = $mysqli->query($resultado);
 
                 if ($row = $query->fetch_assoc()) {
-                    $video_url = $row['id']; 
+                    $video_url = $row['trailer']; 
              echo '<main class="content">';
              echo '<div class = "container"';
              echo '<div class="movie-header">';
