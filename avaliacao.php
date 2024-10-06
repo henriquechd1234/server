@@ -72,7 +72,7 @@ else{
              echo '</div>';
              echo '<div class="movie-content">';
              echo '<div class="movie-poster">';
-             
+               if (!empty($video_url)) {
                     ?>
                 <iframe width="560" height="315" 
                 src="<?php echo $video_url; ?>" 
