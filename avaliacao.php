@@ -81,7 +81,7 @@ else{
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
-                <? php
+                <?php
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
              echo '<div class ="movie-details">';
              echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
