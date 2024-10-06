@@ -52,7 +52,7 @@ else{
         echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>';
         echo '</div>';
 }
-}
+
 }
 }else if(isset($_GET['id']) && !empty($_GET['id'])) {
                 $id = $_GET['id'];
@@ -89,7 +89,8 @@ else{
              echo '</div>';
              echo '</div>';
              echo '</main>';
-            } else {
+            }
+                }else {
                 echo 'nenhum filme encontrado';
             } ?>
 
