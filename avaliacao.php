@@ -71,6 +71,7 @@ else{
              echo '</div>';
              echo '<div class="movie-content">';
              echo '<div class="movie-poster">';
+             echo 'Trailer'. $row['trailer'];
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
              echo '<div class ="movie-details">';
              echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
