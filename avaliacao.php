@@ -83,13 +83,14 @@ else{
                 allowfullscreen>
             </iframe>
                 <?php
+               }
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
              echo '<div class ="movie-details">';
              echo  '<p class = "synopsis"> '. $row['descricao'] .' </p>';
              echo '</div>';
              echo '</div>';
              echo '</main>';
-            }
+            
                 }else {
                 echo 'nenhum filme encontrado';
             } ?>
