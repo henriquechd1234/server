@@ -74,13 +74,13 @@ else{
              echo '<div class="movie-poster">';
              
                     ?>
-                    <iframe width="560" height="315" 
-                    src="<?php echo $video_url; ?>" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                    </iframe>
+                <iframe width="560" height="315" 
+                src="<?php echo $video_url; ?>" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
                 <? php
              echo '<img src="' . $row['foto'] . '" alt= "Poster do filme Coringa">';
              echo '<div class ="movie-details">';
