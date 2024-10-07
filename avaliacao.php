@@ -129,7 +129,10 @@ if(!isset($_SESSION)){
             echo "Avaliação enviada com sucesso!";
         } else {
             echo "Erro ao enviar a avaliação: " . $mysqli->error;
-        } if ($queryAvaliacao->num_rows > 0) {
+        } 
+        
+        $queryAvaliacao = $mysqli->query($avaliacoes);
+        if ($queryAvaliacao->num_rows > 0) {
         echo '<div class="avaliacoes">';
         while ($avaliacaoRow = $queryAvaliacao->fetch_assoc()) {
             echo '<div class="avaliacao">';
