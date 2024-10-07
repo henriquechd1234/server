@@ -29,7 +29,7 @@ if(!isset($_SESSION)){
                 </button>
             </form>
         </nav>
-         <hr class="linha">
+        <hr class="linha">
     </header>
 
     <!-- Exibição de resultados de busca -->
@@ -82,7 +82,6 @@ if(!isset($_SESSION)){
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
-                     
             </iframe>
                 <?php
                  }
@@ -92,7 +91,6 @@ if(!isset($_SESSION)){
                 echo '</div>';
                 echo '</div>';
                 echo '</main>';
-                
             } else {
                 echo 'Nenhum filme encontrado.';
             }
@@ -101,59 +99,64 @@ if(!isset($_SESSION)){
     </main>
 
     <!-- Formulário de avaliação -->
-    <form action="" method="POST">
-        <p>Avalie esse filme:</p>
-        <label for="avaliacao">Comentário:</label>
-        <textarea name="avaliacao" required></textarea>
-        <label for="nota">Nota (1 a 5):</label>
-        <input type="number" name="nota" min="1" max="5" required>
-        <button type="submit">Enviar</button>
-    </form>
+    <div class="review-container">
+        <h2>Deixe sua avaliação:</h2>
+        <form action="" method="POST">
+            <label for="avaliacao">Comentário:</label>
+            <textarea name="avaliacao" required></textarea>
+            <label for="nota">Nota (1 a 5):</label>
+            <input type="number" name="nota" min="1" max="5" required>
+            <button type="submit">Enviar Avaliação</button>
+        </form>
 
-    <?php
-        }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
-    if (!isset($_SESSION['id'])) {
-        echo "Usuário não está logado. Por favor, faça login.";
-        exit; // Interrompe a execução do script
-    }
+        <?php
+        if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+            if (!isset($_SESSION['id'])) {
+                echo "Usuário não está logado. Por favor, faça login.";
+                exit;
+            }
 
-    $id_user = $_SESSION['id'];
-    if (!is_numeric($id_user)) {
-        echo "ID do usuário inválido.";
-        exit; // Interrompe a execução do script
-    }
+            $id_user = $_SESSION['id'];
+            if (!is_numeric($id_user)) {
+                echo "ID do usuário inválido.";
+                exit;
+            }
 
-    $avali = $_POST['avaliacao'];
-    $nota = $_POST['nota'];
+            $avali = $_POST['avaliacao'];
+            $nota = $_POST['nota'];
 
-    // Correção do SQL de inserção
-    $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
-    $envio = $mysqli->query($inserir);
+            // Inserindo avaliação
+            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
+            $envio = $mysqli->query($inserir);
 
-    if ($envio === TRUE) {
-        echo "Avaliação enviada com sucesso!";
-    } else {
-        echo "Erro ao enviar a avaliação: " . $mysqli->error;
-    }
+            if ($envio === TRUE) {
+                echo "Avaliação enviada com sucesso!";
+            } else {
+                echo "Erro ao enviar a avaliação: " . $mysqli->error;
+            }
 
-    // Após a inserção, busque novamente as avaliações
-    $queryAvaliacao = $mysqli->query($avaliacoes);
+            // Exibir avaliações após envio
+            $stmt_avaliacao = $mysqli->prepare("SELECT usuarios.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN usuarios ON avaliacao.cadastro_id = usuarios.id WHERE imagens_id = ?");
+            $stmt_avaliacao->bind_param('i', $id);
+            $stmt_avaliacao->execute();
+            $result_avaliacao = $stmt_avaliacao->get_result();
 
-    if ($queryAvaliacao->num_rows > 0) {
-        echo '<div class="avaliacoes">';
-        while ($avaliacaoRow = $queryAvaliacao->fetch_assoc()) {
-            echo '<div class="avaliacao">';
-            echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
-            echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
-            echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
-            echo '</div>';
+            if ($result_avaliacao->num_rows > 0) {
+                echo '<div class="avaliacoes">';
+                echo '<h3>Avaliações:</h3>';
+                while ($avaliacaoRow = $result_avaliacao->fetch_assoc()) {
+                    echo '<div class="avaliacao-item">';
+                    echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
+                    echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
+                    echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
+                    echo '</div>';
+                }
+                echo '</div>';
+            } else {
+                echo '<p>Nenhuma avaliação disponível para este filme.</p>';
+            }
         }
-        echo '</div>';
-    } else {
-        echo 'Nenhuma avaliação disponível para este filme.';
-    }
-}
-        }
-    ?>
+        ?>
+    </div>
 </body>
 </html>
