@@ -131,6 +131,25 @@ if(!isset($_SESSION)){
             echo "Erro ao enviar a avaliação: " . $mysqli->error;
         }
     }
+    if ($queryAvaliacao->num_rows > 0) {
+        echo '<div class="avaliacoes">';
+        while ($avaliacaoRow = $queryAvaliacao->fetch_assoc()) {
+            echo '<div class="avaliacao">';
+            echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
+            echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
+            echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
+            echo '</div>';
+        }
+        echo '</div>';
+    } else {
+        echo 'Nenhuma avaliação disponível para este filme.';
+    }
+}
+                    }
+                } else {
+                    echo "ID não encontrado";
+                }
+                ?> 
     ?>
 </body>
 </html>
