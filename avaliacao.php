@@ -111,33 +111,35 @@ if(!isset($_SESSION)){
     </form>
 
     <?php
-        }
-    if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
-        if (!isset($_SESSION['id'])) {
-            echo "Usuário não está logado. Por favor, faça login.";
-            exit;
-        }
+     if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+    if (!isset($_SESSION['id'])) {
+        echo "Usuário não está logado. Por favor, faça login.";
+        exit; // Interrompe a execução do script
+    }
 
-        $id_user = $_SESSION['id'];
-        $avali = $_POST['avaliacao'];
-        $nota = $_POST['nota'];
+    $id_user = $_SESSION['id'];
+    if (!is_numeric($id_user)) {
+        echo "ID do usuário inválido.";
+        exit; // Interrompe a execução do script
+    }
 
-        $stmt = $mysqli->prepare("INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param('isii', $id_user, $avali, $nota, $id);
-        
-        if ($stmt->execute()) {
-            echo "Avaliação enviada com sucesso!";
-        } else {
-            echo "Erro ao enviar a avaliação: " . $mysqli->error;
-        } 
-         $avaliacoes = "
-            SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao, i.foto 
-            FROM avaliacao AS a 
-            JOIN cadastro AS c ON a.cadastro_id = c.id 
-            JOIN imagens AS i ON a.imagens_id = i.id 
-            WHERE i.id = '$id'";
-        $queryAvaliacao = $mysqli->query($avaliacoes);
-        if ($queryAvaliacao->num_rows > 0) {
+    $avali = $_POST['avaliacao'];
+    $nota = $_POST['nota'];
+
+    // Correção do SQL de inserção
+    $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
+    $envio = $mysqli->query($inserir);
+
+    if ($envio === TRUE) {
+        echo "Avaliação enviada com sucesso!";
+    } else {
+        echo "Erro ao enviar a avaliação: " . $mysqli->error;
+    }
+
+    // Após a inserção, busque novamente as avaliações
+    $queryAvaliacao = $mysqli->query($avaliacoes);
+
+    if ($queryAvaliacao->num_rows > 0) {
         echo '<div class="avaliacoes">';
         while ($avaliacaoRow = $queryAvaliacao->fetch_assoc()) {
             echo '<div class="avaliacao">';
@@ -150,7 +152,12 @@ if(!isset($_SESSION)){
     } else {
         echo 'Nenhuma avaliação disponível para este filme.';
     }
-    }
+}
+                    }
+                } else {
+                    echo "ID não encontrado";
+                }
+                
     ?>
 </body>
 </html>
