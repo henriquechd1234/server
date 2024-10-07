@@ -130,7 +130,12 @@ if(!isset($_SESSION)){
         } else {
             echo "Erro ao enviar a avaliação: " . $mysqli->error;
         } 
-        
+         $avaliacoes = "
+            SELECT c.nome, a.avaliacao, a.nota, a.data_avaliacao, i.foto 
+            FROM avaliacao AS a 
+            JOIN cadastro AS c ON a.cadastro_id = c.id 
+            JOIN imagens AS i ON a.imagens_id = i.id 
+            WHERE i.id = '$id'";
         $queryAvaliacao = $mysqli->query($avaliacoes);
         if ($queryAvaliacao->num_rows > 0) {
         echo '<div class="avaliacoes">';
