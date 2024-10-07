@@ -144,7 +144,7 @@ if(!isset($_SESSION)){
     } else {
         echo 'Nenhuma avaliação disponível para este filme.';
     }
-}
+
                     }
                 } else {
                     echo "ID não encontrado";
