@@ -61,6 +61,8 @@ if(!isset($_SESSION)){
             $result = $stmt->get_result();
 
             if($row = $result->fetch_assoc()){
+                if ($row = $query->fetch_assoc()) {
+                    $video_url = $row['trailer']; 
                 echo '<main class="content">';
                 echo '<div class="container">';
                 echo '<div class="movie-header">';
@@ -91,6 +93,7 @@ if(!isset($_SESSION)){
                 echo '</div>';
                 echo '</div>';
                 echo '</main>';
+                }
             } else {
                 echo 'Nenhum filme encontrado.';
             }
