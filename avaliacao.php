@@ -29,7 +29,7 @@ if(!isset($_SESSION)){
                 </button>
             </form>
         </nav>
-        <hr class="linha">
+         <hr class="linha">
     </header>
 
     <!-- Exibição de resultados de busca -->
