@@ -1,172 +1,217 @@
-body {
-    font-family: Arial, sans-serif;
+/* Geral */
+* {
     margin: 0;
-    background-color: #1c1c1c;
-    color: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed; /* Para a barra ficar fixa */
+    width: 100%;
+    z-index: 1000; /* Para garantir que a barra fique no topo */
+    top: 0;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 250px;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #555;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-container button img {
+    max-width: 20px;
+    height: auto;
+}
+
+.linha {
+    border: 0;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Conteúdo principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 90px; 
+    padding-top: 90px; /* Adiciona espaço superior para compensar a barra fixa */
 }
 
-.linha {
-    border: none;
-    height: 2px;
-    background-color: #ffffff; // Cor ajustada para contraste
-    margin: 10px 0;
+/* Estilos dos filmes */
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    max-width: 250px;
 }
 
-.header {
-    background-color: #333333;
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.movie h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.info {
+    display: block;
+    width: 100%;
     padding: 10px 0;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        height: 40px;
-    }
+    background-color: #555;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.content {
-    .movie-header {
-        text-align: center;
-        margin-bottom: 20px;
+.info:hover {
+    background-color: #777;
+}
 
-        h1 {
-            font-size: 2.5rem;
+/* Avaliação */
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
 
-            @media (max-width: 768px) {
-                font-size: 2rem; // Tamanho da fonte reduzido em dispositivos menores
-            }
-        }
+form p {
+    margin-bottom: 10px;
+}
 
-        .original-title {
-            font-style: italic;
-            color: #888888;
-        }
+form textarea, form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
 
-        .rating {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
 
-            .span1 {
-                font-size: 1.2rem;
-                color: #ffcc00;
-            }
-        }
+form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Detalhes do filme */
+.movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.movie-header h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.rating span {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.rating p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.movie-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-poster img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.movie-details {
+    max-width: 800px;
+    margin-left: 20px;
+}
+
+.synopsis {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
     }
 
     .movie-content {
-        display: flex;
-        flex-wrap: wrap; // Permitir quebra de linha
-        justify-content: center; // Centralizar os itens
-        margin-bottom: 30px;
-
-        .movie-poster {
-            flex-basis: 100%; // Faz o poster ocupar toda a largura em telas pequenas
-
-            img {
-                max-width: 300px;
-                border-radius: 10px;
-                width: 100%; // Faz a imagem ser responsiva
-            }
-        }
-
-        .movie-info {
-            flex-grow: 1;
-            padding-left: 20px;
-            flex-basis: 100%; // Faz a informação ocupar toda a largura em telas pequenas
-
-            .trailer iframe {
-                width: 100%;
-                height: 350px;
-                border-radius: 10px;
-                border: none;
-            }
-
-            .interaction-buttons {
-                margin-top: 10px;
-                display: flex;
-                gap: 10px;
-
-                button {
-                    background-color: #312f2f;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #363535;
-                    }
-                }
-            }
-        }
+        flex-direction: column;
     }
 
     .movie-details {
-        text-align: left;
-
-        .p2 {
-            font-size: large;
-        }
-
-        .synopsis {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-    }
-}
-
-.footer {
-    background-color: #333333;
-    padding: 20px;
-    text-align: center;
-
-    .add-to-list {
-        background-color: #ffcc00;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        color: black;
-
-        &:hover {
-            background-color: #e6b800;
-        }
-    }
-}
-
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-    .movie-content {
-        flex-direction: column; // Muda a direção para coluna em telas pequenas
-        align-items: center; // Centraliza os itens
-    }
-
-    .movie-info {
-        padding-left: 0; // Remove o padding em telas menores
-        margin-top: 20px; // Adiciona espaço acima
-    }
-
-    .interaction-buttons {
-        flex-direction: column; // Coloca os botões em coluna
-        align-items: center; // Centraliza os botões
-    }
-
-    .rating {
-        flex-direction: column; // Coloca a classificação em coluna
-        align-items: center; // Centraliza a classificação
+        margin-left: 0;
+        margin-top: 20px;
     }
 }
