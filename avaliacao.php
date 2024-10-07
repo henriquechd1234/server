@@ -81,9 +81,10 @@ if(!isset($_SESSION)){
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
-                     }
+                     
             </iframe>
                 <?php
+                 }
                 echo '</div>';
                 echo '<div class="movie-details">';
                 echo '<p class="synopsis">' . $row['descricao'] . '</p>';
