@@ -73,6 +73,16 @@ if(!isset($_SESSION)){
                 echo '<div class="movie-content">';
                 echo '<div class="movie-poster">';
                 echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa">';
+                 if (!empty($video_url)) {
+                    ?>
+                <iframe width="560" height="315" 
+                src="<?php echo $video_url; ?>" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+                <?php
                 echo '</div>';
                 echo '<div class="movie-details">';
                 echo '<p class="synopsis">' . $row['descricao'] . '</p>';
