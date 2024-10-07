@@ -53,7 +53,7 @@ if(!isset($_SESSION)){
                     echo '</div>';
                 }
             }
-        } elseif(isset($_GET['id']) && !empty($_GET['id'])) {
+        } else if(isset($_GET['id']) && !empty($_GET['id'])) {
             $id = $_GET['id'];
             $stmt = $mysqli->prepare("SELECT * FROM imagens WHERE id = ?");
             $stmt->bind_param('i', $id);
@@ -81,6 +81,7 @@ if(!isset($_SESSION)){
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
+                     }
             </iframe>
                 <?php
                 echo '</div>';
