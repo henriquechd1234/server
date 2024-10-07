@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/* Geral */
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,9 +19,9 @@ body {
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
-  position: fixed; /* Para a barra ficar fixa */
+  position: fixed;
   width: 100%;
-  z-index: 1000; /* Para garantir que a barra fique no topo */
+  z-index: 1000;
   top: 0;
 }
 
@@ -34,6 +33,8 @@ body {
 .search-container {
   display: flex;
   align-items: center;
+  max-width: 500px;
+  width: 100%;
 }
 
 .search-container input {
@@ -41,7 +42,7 @@ body {
   border: none;
   border-radius: 5px 0 0 5px;
   outline: none;
-  width: 250px;
+  width: 80%;
 }
 
 .search-container button {
@@ -57,6 +58,7 @@ body {
   height: auto;
 }
 
+/* Linha divisória */
 .linha {
   border: 0;
   height: 2px;
@@ -69,7 +71,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 90px; /* Adiciona espaço superior para compensar a barra fixa */
+  padding-top: 90px;
+  /* Espaço para compensar a barra fixa */
 }
 
 /* Estilos dos filmes */
@@ -88,129 +91,74 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.movie img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .movie h2 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #fff;
+  margin: 10px 0;
 }
 
 .info {
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #555;
-  border-radius: 5px;
+  background-color: #ff9900;
   color: #fff;
-  margin-top: 10px;
-  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .info:hover {
-  background-color: #777;
+  background-color: #ff7700;
 }
 
-/* Avaliação */
-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-form p {
-  margin-bottom: 10px;
-}
-
-form textarea, form input {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-form button {
-  padding: 10px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-
-/* Detalhes do filme */
-.movie-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.movie-header h1 {
-  font-size: 24px;
-  color: #fff;
-}
-
-.rating span {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-.rating p {
-  font-size: 14px;
-  color: #aaa;
-}
-
-.movie-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.movie-poster img {
-  max-width: 300px;
-  height: auto;
+/* Avaliações */
+.review-container {
+  margin-top: 30px;
+  background-color: #444;
+  padding: 20px;
   border-radius: 10px;
 }
 
-.movie-details {
-  max-width: 800px;
-  margin-left: 20px;
+.review-container h2 {
+  margin-bottom: 20px;
 }
 
-.synopsis {
-  font-size: 16px;
-  color: #ddd;
+.review-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-  .movie-content {
-    flex-direction: column;
-  }
-  .movie-details {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-}/*# sourceMappingURL=style.css.map */
+.review-container input[type=number] {
+  width: 50px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.review-container button {
+  background-color: #ff9900;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.review-container button:hover {
+  background-color: #ff7700;
+}
+
+/* Exibição das Avaliações */
+.avaliacoes {
+  margin-top: 20px;
+}
+
+.avaliacao-item {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.avaliacao-item p {
+  margin-bottom: 5px;
+}
