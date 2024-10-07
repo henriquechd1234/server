@@ -11,8 +11,7 @@ if(!isset($_SESSION)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coringa: Delírio a Dois - Página do Filme</title>
-    <!-- Links CSS corrigidos -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="filme.css">
     <link rel="stylesheet" href="ini.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
