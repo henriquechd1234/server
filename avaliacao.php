@@ -60,12 +60,12 @@ else{
                 $resultado = "SELECT * FROM imagens WHERE id = '$id'";
                 $query = $mysqli->query($resultado);
 
-                if ($row = $query->fetch_assoc()) {
-                    $video_url = $row['trailer']; 
              echo '<main class="content">';
              echo '<div class = "container"';
              echo '<div class="movie-header">';
              echo '<h1 class= "original-title">'. $row['nome'] . '</h1>';
+                if ($row = $query->fetch_assoc()) {
+                    $video_url = $row['trailer']; 
              echo '<div class="rating">';
              echo '<span>⭐ 5,7/10</span>';
              echo '<p>4,8 mil avaliações</p>';
