@@ -10,15 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfinityHUB</title>
-    <link rel="stylesheet" href="../css/ini.css">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" a>
+    <link rel="stylesheet" href="css/ini.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" a>
     
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="ini.php"><img src="../img/icons8-infinito-96.png" alt="RateHub Logo"></a>
+            <a href="ini.php"><img src="img/icons8-infinito-96.png" alt="RateHub Logo"></a>
         </div>
         <form class="search-container"  method="GET">
                 <input  type="text" placeholder="Pesquisar na Biblioteca"  id="busca" name="busca">
