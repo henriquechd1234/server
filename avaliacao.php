@@ -143,10 +143,7 @@ if(!isset($_SESSION)){
         echo '</div>';
     } else {
         echo 'Nenhuma avaliação disponível para este filme.';
-    } else {
-                    echo "ID não encontrado";
-                }
-                
+    }
     ?>
 </body>
 </html>
