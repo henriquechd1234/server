@@ -76,13 +76,9 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa">';
                  if (!empty($video_url)) {
                     ?>
-                <iframe width="560" height="315" 
-                src="<?php echo $video_url; ?>" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+              <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</div>
                 <?php
                  }
                 echo '</div>';
