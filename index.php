@@ -85,7 +85,7 @@
                         <img src="<?php echo $row2['foto']; ?>" alt="">
                         <div class="movie-info">
                             <h3><?php echo $row2 ['nome']?></h3>
-                            <?php  echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>'; ?>
+                            <?php  echo '<a class="info" href="avaliacao.php?id='  . $row2['id'] . '">Mais Informações</a>'; ?>
                         </div>
                     </div>
                     <?php } ?>
