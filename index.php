@@ -191,26 +191,25 @@
         }
     ?>
     <style>
-<style>
-    .movie-container {
+.movie-container {
         display: flex;
-        flex-wrap: wrap; /* Permite que os filmes se ajustem em várias linhas se necessário */
-        justify-content: space-between; /* Distribui os filmes horizontalmente */
-        margin: 20px; /* Margem externa */
+        flex-wrap: nowrap; /* Impede a quebra de linha, forçando os filmes a ficarem em uma linha */
+        justify-content: center; /* Centraliza os filmes horizontalmente */
+        margin: 20px;
+        gap: 20px; /* Adiciona espaçamento entre os filmes */
     }
 
     .movie {
         display: flex;
-        flex-direction: column; /* Organiza os elementos dentro de cada card na vertical */
+        flex-direction: column;
         align-items: center;
-        margin: 20px;
         padding: 15px;
         background-color: #333;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-        width: 200px; /* Define a largura fixa dos filmes */
-        flex: 1 1 200px; /* Ajuste para garantir que os filmes fiquem na horizontal */
+        width: 200px; /* Define a largura do filme */
+        flex-shrink: 0; /* Impede o redimensionamento dos filmes */
     }
 
     .movie img {
@@ -231,11 +230,9 @@
         color: #fff;
         margin-bottom: 5px;
         cursor: pointer;
-        margin-top: auto;
         text-align: center;
         text-decoration: none;
     }
-</style>
 
 </style>
 
