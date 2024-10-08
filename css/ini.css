@@ -158,4 +158,65 @@ body {
   .movie-card img {
     max-height: 150px;
   }
-}/*# sourceMappingURL=ini.css.map */
+}
+.slider-container {
+    position: relative;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Slide */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* 3 filmes */
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.slide-info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.slide-info h2 {
+    font-size: 24px;
+    margin: 5px 0 0 0;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
