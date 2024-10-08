@@ -192,25 +192,18 @@
     ?>
     <style>
 
-    .movie-container {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os filmes se ajustem em várias linhas */
-        justify-content: center; /* Centraliza os filmes na linha */
-        margin: 20px; /* Margem externa */
-    }
-
     .movie {
         display: flex;
-        flex-direction: row; /* Ajuste para organizar na horizontal */
-        align-items: center; 
-        margin: 10px; /* Menor margem entre os filmes */
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
         padding: 15px;
         background-color: #333;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-        max-width: 200px; /* Ajuste para permitir mais filmes */
-        flex: 1 1 150px; /* Permite que os filmes se ajustem, com base na largura disponível */
+        max-width: 250px;
+        margin-left: 70px;
     }
 
     .movie img {
@@ -220,22 +213,20 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .info {
+    .info{
         display: block;
-        width: 100%;
-        padding: 5px 0;
-        background-color: #555;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        margin-bottom: 5px;
-        cursor: pointer;
-        margin-top: auto;
-        text-align: center;
-        text-decoration: none;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
     }
-
 </style>
 
     <script src="../js/ini.js"></script>
