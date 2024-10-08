@@ -90,7 +90,7 @@ echo '</div>';
                     <?php while ($row2 = $sql_query -> fetch_assoc()){ ?>
                     
                     <div class="movie-card">
-                        <img src="<?php echo $row2['id']; ?>" alt="">
+                        <img src="<?php echo $row2['foto']; ?>" alt="">
                         <div class="movie-info">
                             <h3><?php echo $row2 ['nome']?></h3>
                             <a href="avaliacao.php"><button>Avaliar</button></a>
