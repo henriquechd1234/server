@@ -95,6 +95,7 @@ echo '</div>';
                             <h3><?php echo $row2 ['nome']?></h3>
                             <?php echo '<a class="info" href="avaliacao.php?id='  . $row2['id'] . '">Mais Informações</a>'?>
                         </div>
+                        <?php } ?>
                     </div>
                <?php while ($row3 = $sql_query->fetch_assoc()){ ?>
     <div class="slider-container">
@@ -122,7 +123,7 @@ echo '</div>';
                     <h3>Filme da Semana</h3>
                     <h2>Third Movie</h2>
                 </div>
-<?php } ?>
+            <?php } ?>
             </div>
         </div>
     </div>
