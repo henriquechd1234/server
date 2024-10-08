@@ -94,6 +94,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             } else {
                 echo 'Nenhum filme encontrado.';
             }
+}
         ?>
     
     </main>
