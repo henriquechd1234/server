@@ -90,9 +90,10 @@ body {
 }
 
 .movie img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+        width: 200px; /* Largura fixa */
+        height: 300px; /* Altura fixa */
+        object-fit: cover; /* Corta a imagem para se ajustar ao tamanho definido */
+        border-radius: 10px; /* Manter o arredondamento dos cantos, se necessário */
 }
 
 .movie h2 {
@@ -218,11 +219,6 @@ body {
     width: 100%;
     height: 100%;
 }
-.movie img {
-    width: 200px; /* Largura fixa */
-    height: 300px; /* Altura fixa */
-    object-fit: cover; /* Corta a imagem para se ajustar ao tamanho definido */
-    border-radius: 10px; /* Manter o arredondamento dos cantos, se necessário */
-}
+
 
 
