@@ -126,6 +126,7 @@ echo '</div>';
         </div>
     </div>
 <?php } ?>
+                <?php } ?>
 
     <style>
 .container {
