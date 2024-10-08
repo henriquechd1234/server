@@ -157,12 +157,8 @@
                             <button>+ Lista</button>
                             <button>Trailer</button>
                         </div>
-
                     </div>
-    <br>
-<br>
-<br>
-                    
+                     <p class="espacamento"></p>
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
