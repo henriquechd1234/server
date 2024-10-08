@@ -124,9 +124,9 @@ echo '</div>';
                     <h2>Third Movie</h2>
                 </div>
             <?php } ?>
+<?php } ?>
             </div>
         </div>
-<?php } ?>
     </div>
     <style>
 .container {
