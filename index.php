@@ -159,7 +159,10 @@
                         </div>
 
                     </div>
-    
+    <br>
+<br>
+<br>
+                    
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
