@@ -136,7 +136,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             }
 
             // Exibir avaliações após envio
-            $stmt_avaliacao = $mysqli->prepare("SELECT usuarios.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN usuarios ON avaliacao.cadastro_id = usuarios.id WHERE imagens_id = ?");
+            $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = usuarios.id WHERE imagens_id = ?");
             $stmt_avaliacao->bind_param('i', $id);
             $stmt_avaliacao->execute();
             $result_avaliacao = $stmt_avaliacao->get_result();
