@@ -88,16 +88,15 @@ body {
   background-color: #333;
   border-radius: 10px;
   max-width: 250px;
-  width: 100%; /* Garante que ocupe todo o espaço disponível */
 }
 
 .movie img {
-  width: 100%; /* Largura máxima da imagem igual ao contêiner */
-  max-width: 200px; /* Limita a largura máxima */
-  height: 300px; /* Altura fixa */
-  -o-object-fit: cover;
-     object-fit: cover; /* Ajusta a imagem sem distorcer */
-  border-radius: 10px; /* Arredondamento */
+.movie img {
+  width: 200px; /* Largura fixa para o pôster */
+  height: 300px; /* Altura fixa para o pôster */
+  object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
+  border-radius: 10px; /* Mantém as bordas arredondadas */
+}
 }
 
 .movie h2 {
