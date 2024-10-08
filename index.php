@@ -124,10 +124,11 @@ echo '</div>';
                     <h2>Third Movie</h2>
                 </div>
             <?php } ?>
-<?php } ?>
+
             </div>
         </div>
     </div>
+                <?php } ?>
     <style>
 .container {
     display: flex;
