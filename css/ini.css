@@ -175,6 +175,7 @@ body {
   margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
+  height: 450px; /* Ajuste a altura para um tamanho agradável */
 }
 
 .slider {
@@ -190,7 +191,8 @@ body {
 
 .slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem se ajuste bem ao espaço */
   display: block;
   border-radius: 10px;
 }
