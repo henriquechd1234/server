@@ -77,7 +77,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                  if (!empty($video_url)) {
                     ?>
               <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <iframe src="<?php echo $video_url; ?>" frameborder="0" allowfullscreen></iframe>
 </div>
                 <?php
                  }
@@ -132,7 +132,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             }
 
             // Exibir avaliações após envio
-            $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = usuarios.id WHERE imagens_id = ?");
+            $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = cadastro.id WHERE imagens_id = ?");
             $stmt_avaliacao->bind_param('i', $id);
             $stmt_avaliacao->execute();
             $result_avaliacao = $stmt_avaliacao->get_result();
