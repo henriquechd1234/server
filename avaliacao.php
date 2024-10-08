@@ -35,7 +35,7 @@ if(!isset($_SESSION)){
     <!-- Exibição de resultados de busca -->
     <main class="container">
         <?php 
-        if(isset($_GET['busca']) && !empty($_GET['busca'])){
+}if(isset($_GET['busca']) && !empty($_GET['busca'])){
             $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
             $stmt = $mysqli->prepare("SELECT id, nome, descricao, foto FROM imagens WHERE nome LIKE ?");
             $stmt->bind_param('s', $procurar);
