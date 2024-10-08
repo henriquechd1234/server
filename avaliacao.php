@@ -105,6 +105,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             <button type="submit">Enviar Avaliação</button>
         </form>
 
+    </div>
         <?php
         }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             if (!isset($_SESSION['id'])) {
@@ -153,6 +154,5 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             }
         }
         ?>
-    </div>
 </body>
 </html>
