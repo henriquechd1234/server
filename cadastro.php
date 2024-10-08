@@ -24,7 +24,7 @@
             $verificador = $sql_q -> num_rows;
 
             if($verificador > 0 ) {
-                echo '<p>' . 'Ja existe alguem com o mesmo nome ou o mesmo email, por favor mude' . '</p>';
+               $error = '<p>' . 'Email ou usuario ja existente, por favor use outro nome ou email' . '</p>';
             }else {
                 
                 $result = $sql_q -> num_rows;
@@ -91,11 +91,11 @@
                     </ul>
                  <?php if (!empty($errors)) { 
                     foreach ($errors as $error) {
-                        if (strpos($error, "Senha") !== false) {
+                        
                             echo "<div style='color: rgb(208, 51, 51);'>$error</div>"; // Exibir a mensagem de erro em vermelho
-                        }
                     }
-                } ?>
+                    }
+                 ?>
                 </div>
             </div>
             <button type="submit">Cadastrar</button>
