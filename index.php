@@ -126,8 +126,8 @@ echo '</div>';
             <?php } ?>
             </div>
         </div>
-    </div>
 <?php } ?>
+    </div>
     <style>
 .container {
     display: flex;
