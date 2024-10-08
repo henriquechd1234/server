@@ -12,6 +12,8 @@
     <title>InfinityHUB</title>
     <link rel="stylesheet" href="css/ini.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" a>
+     <link rel="stylesheet" href="css/reset.css">
+
     
 </head>
 
