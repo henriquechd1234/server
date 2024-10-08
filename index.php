@@ -113,7 +113,7 @@ echo '</div>';
                 </div>
             </div>
             <div class="slide">
-                <img src="<?php $row2['foto']; ?>" alt="Another Movie">
+                <img src="<?php $row3['foto']; ?>" alt="Another Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
                     <h2><?php echo $row3['nome']; ?></h2>
