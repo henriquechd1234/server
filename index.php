@@ -191,10 +191,16 @@
         }
     ?>
     <style>
+.movie-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os filmes se ajustem em várias linhas se necessário */
+        justify-content: center; /* Centraliza os filmes na linha */
+        margin: 20px; /* Margem externa */
+    }
 
     .movie {
         display: flex;
-        flex-direction: column;
+        flex-direction: row; /* Alinha os itens horizontalmente */
         align-items: center;
         margin: 20px;
         padding: 15px;
@@ -203,7 +209,6 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
         max-width: 250px;
-        margin-left: 70px;
     }
 
     .movie img {
@@ -213,19 +218,20 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .info{
+
+    .info {
         display: block;
-    width: 100%;
-    padding: 5px 0;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    margin-bottom: 5px;
-    cursor: pointer;
-    margin-top: auto;
-    text-align: center;
-    text-decoration: none;
+        width: 100%;
+        padding: 5px 0;
+        background-color: #555;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        margin-bottom: 5px;
+        cursor: pointer;
+        margin-top: auto;
+        text-align: center;
+        text-decoration: none;
     }
 </style>
 
