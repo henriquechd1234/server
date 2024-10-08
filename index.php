@@ -63,13 +63,18 @@
                 }
                 else{
                     while ($row= $result -> fetch_assoc()){
-                        echo '<div class = "container"';
-                        echo '<div class="movie">';
-                        echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
-                        echo '<h2 style="color: white";>' . $row['nome'] . '</h2>';
-                        echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>';
-                        echo '</div>';
-                        echo '</div>';
+                     echo '<div class="container">'; 
+
+while($row = $result->fetch_assoc()) {
+    echo '<div class="movie">'; 
+        echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '">'; 
+        echo '<h3 style="color: white;">' . $row['nome'] . '</h3>'; /
+        echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>'; 
+    echo '</div>';
+}
+
+echo '</div>'; 
+
                 }
             }
         }else{
