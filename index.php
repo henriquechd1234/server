@@ -163,7 +163,31 @@
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
-
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="batmanimages4.webp" alt="The Batman">
+                <div class="slide-info">
+                    <h3>Filme da Semana</h3>
+                    <h2>The Batman</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="batmanimages4.webp" alt="Another Movie">
+                <div class="slide-info">
+                    <h3>Filme da Semana</h3>
+                    <h2>Another Movie</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="batmanimages4.webp" alt="Third Movie">
+                <div class="slide-info">
+                    <h3>Filme da Semana</h3>
+                    <h2>Third Movie</h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php 
         }
     ?>
