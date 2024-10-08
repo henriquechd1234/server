@@ -110,6 +110,33 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
         </form>
 
         <?php
+        
+        if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+            if (!isset($_SESSION['id'])) {
+                echo "Usuário não está logado. Por favor, faça login.";
+                
+            }
+
+            if (!is_numeric($id_user)) {
+                echo "ID do usuário inválido.";
+               
+            }else{
+
+            $id_user = $_SESSION['id'];
+            $avali = $_POST['avaliacao'];
+            $nota = $_POST['nota'];
+
+            // Inserindo avaliação
+            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
+            $envio = $mysqli->query($inserir);
+
+            if ($envio === TRUE) {
+                echo "Avaliação enviada com sucesso!";
+            } else {
+                echo "Erro ao enviar a avaliação: " . $mysqli->error;
+            }
+}
+}
             $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = cadastro.id WHERE imagens_id = ?");
             $stmt_avaliacao->bind_param('i', $id);
             $stmt_avaliacao->execute();
@@ -129,33 +156,6 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             } else {
                 echo '<p>Nenhuma avaliação disponível para este filme.</p>';
             }
-        
-        }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
-            if (!isset($_SESSION['id'])) {
-                echo "Usuário não está logado. Por favor, faça login.";
-                
-            }
-
-            $id_user = $_SESSION['id'];
-            if (!is_numeric($id_user)) {
-                echo "ID do usuário inválido.";
-               
-            }else{
-
-            $avali = $_POST['avaliacao'];
-            $nota = $_POST['nota'];
-
-            // Inserindo avaliação
-            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
-            $envio = $mysqli->query($inserir);
-
-            if ($envio === TRUE) {
-                echo "Avaliação enviada com sucesso!";
-            } else {
-                echo "Erro ao enviar a avaliação: " . $mysqli->error;
-            }
-}
-}
             // Exibir avaliações após envio
         ?>
     </div>
