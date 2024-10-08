@@ -105,17 +105,17 @@ echo '</div>';
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
-                <img src="https://imgs.search.brave.com/XG3MfJAYNN9eEsQ_igKEz5rnQJm-zaIIJeQuz_JycCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZWdh/ZG9kYWRjLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNy90aGUtYmF0/bWFuLTItdmlsYW8t/bGVnYWRvZGFkYy53/ZWJw" alt="The Batman">
+                <img src="<?php $row2['foto'];" ?> alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
-                    <h2>The Batman</h2>
+                    <h2><?php echo $row2['nome']; ?></h2>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://imgs.search.brave.com/XG3MfJAYNN9eEsQ_igKEz5rnQJm-zaIIJeQuz_JycCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZWdh/ZG9kYWRjLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNy90aGUtYmF0/bWFuLTItdmlsYW8t/bGVnYWRvZGFkYy53/ZWJw" alt="Another Movie">
+                <img src="<?php $row2['foto'];" alt="Another Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
-                    <h2>Another Movie</h2>
+                    <h2><?php echo $row2['nome']; ?></h2>
                 </div>
             </div>
             <div class="slide">
