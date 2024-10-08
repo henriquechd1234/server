@@ -88,12 +88,16 @@ body {
   background-color: #333;
   border-radius: 10px;
   max-width: 250px;
+  width: 100%; /* Garante que ocupe todo o espaço disponível */
 }
 
 .movie img {
-  width: 200px; 
-  height: 300px;
-  border-radius: 10px;
+  width: 100%; /* Largura máxima da imagem igual ao contêiner */
+  max-width: 200px; /* Limita a largura máxima */
+  height: 300px; /* Altura fixa */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ajusta a imagem sem distorcer */
+  border-radius: 10px; /* Arredondamento */
 }
 
 .movie h2 {
@@ -181,6 +185,10 @@ body {
 @media (max-width: 768px) {
   .movie {
     max-width: 100%;
+  }
+  .movie img {
+    width: 100%; /* As imagens se ajustam ao tamanho do contêiner */
+    max-width: none; /* Remove o limite de largura para telas menores */
   }
   .search-container {
     width: 100%;
