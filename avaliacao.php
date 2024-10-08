@@ -150,7 +150,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             } else {
                 echo "Erro ao enviar a avaliação: " . $mysqli->error;
             }
-
+}
             // Exibir avaliações após envio
         ?>
     </div>
