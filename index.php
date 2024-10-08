@@ -102,20 +102,21 @@ echo '</div>';
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
+                <?php while ($row3 = $sql_query -> fetch_assoc()){ ?>
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
                 <img src="<?php $row2['foto']; ?>"alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
-                    <h2><?php echo $row2['nome']; ?></h2>
+                    <h2><?php echo $row3['nome']; ?></h2>
                 </div>
             </div>
             <div class="slide">
                 <img src="<?php $row2['foto']; ?>" alt="Another Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
-                    <h2><?php echo $row2['nome']; ?></h2>
+                    <h2><?php echo $row3['nome']; ?></h2>
                 </div>
             </div>
             <div class="slide">
@@ -127,6 +128,7 @@ echo '</div>';
             </div>
         </div>
     </div>
+       <?php } ?>       
     <?php 
         }
     ?>
