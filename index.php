@@ -194,12 +194,12 @@
    .movie-container {
     display: flex;
     flex-wrap: wrap; /* Permite que os filmes se ajustem em várias linhas */
-    justify-content: center; /* Centraliza os filmes na linha */
+    justify-content: space-between; /* Centraliza os filmes na linha */
     margin: 20px; /* Margem externa */
 }
 .movie {
     display: flex;
-    flex-direction: row;
+    flex-direction: columm;
     align-items: center;
     margin: 10px; /* Menor margem entre os filmes */
     padding: 15px;
