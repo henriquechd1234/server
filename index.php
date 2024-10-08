@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" a>
      <link rel="stylesheet" href="css/reset.css">
 
-    
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                 <button type="submit">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg" alt="Lupa">
                 </button>
-            
+
             <?php 
             ?>
         </form>
@@ -37,27 +37,27 @@
              session_start();
             }
             if ($_SESSION == TRUE){
-                
+
              echo ('<a style="text-decoration: none; color: aliceblue;" href="desconectar.php"><span>Sair</span></a>');
-         
+
             }else{
                 echo('<a style="text-decoration: none; color: aliceblue;" href="login.php">Login</a>');
             }
         ?>
-           
+
     </nav>
     <?php 
             if(isset($_GET['busca'])&& !empty($_GET['busca'])){
                   $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
-    
+
              // Consulta para buscar o filme pelo nome
             $stmt = $mysqli->prepare("SELECT id, nome,descricao,foto FROM imagens WHERE nome LIKE ?");
             $stmt->bind_param('s', $procurar);
             $stmt->execute();
             $result = $stmt->get_result();
-            
-                
-                
+
+
+
                 if( $result -> num_rows === 0 || $result == ''){
                     echo"<p style='color: white;'>Nenhum resultado encontrado no momento </p>" ;
                 }
@@ -88,7 +88,7 @@ echo '</div>';
                 <button class="prev-button">&#10094;</button> 
                 <div class="top-ten-grid">
                     <?php while ($row2 = $sql_query -> fetch_assoc()){ ?>
-                    
+
                     <div class="movie-card">
                         <img src="<?php echo $row2['foto']; ?>" alt="">
                         <div class="movie-info">
@@ -96,10 +96,8 @@ echo '</div>';
                             <?php echo '<a class="info" href="avaliacao.php?id='  . $row2['id'] . '">Mais Informações</a>'?>
                         </div>
                     </div>
-                    <?php } ?>
-               
+               <?php while ($row3 = $sql_query->fetch_assoc()){ ?>
     <div class="slider-container">
-                <?php $row3 = $sql_query -> fetch_assoc();?>
         <div class="slider">
             <div class="slide">
                 <!-- Corrigido para exibir a imagem corretamente usando echo -->
@@ -124,9 +122,9 @@ echo '</div>';
                     <h3>Filme da Semana</h3>
                     <h2>Third Movie</h2>
                 </div>
+<?php } ?>
             </div>
         </div>
-        <?php } ?>
     </div>
 
     <style>
