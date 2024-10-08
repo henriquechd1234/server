@@ -24,7 +24,7 @@
             $verificador = $sql_q -> num_rows;
 
             if($verificador > 0 ) {
-               $error[] = '<p>' . 'Email ou usuario ja existente, por favor use outro nome ou email' . '</p>';
+               $error[] = 'Email ou usuario ja existente, por favor use outro nome ou email';
             }else {
                 
                 $result = $sql_q -> num_rows;
@@ -89,13 +89,13 @@
                         <li>Incluir ao menos <strong>um número.</strong></li>
                         <li>Não pode conter espaços.</li>
                     </ul>
-                 <?php if (!empty($errors)) { 
-                    foreach ($errors as $error) {
-                        
-                            echo "<div style='color: rgb(208, 51, 51);'>$error</div>"; // Exibir a mensagem de erro em vermelho
-                    }
-                    }
-                 ?>
+                      <?php if (!empty($error)) { ?>
+                        <div style="color: rgb(208, 51, 51);">
+                    <?php foreach ($error as $msg) {
+                            echo "<p>$msg</p>";
+                } ?>
+            </div>
+        <?php } ?>
                 </div>
             </div>
             <button type="submit">Cadastrar</button>
