@@ -73,7 +73,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '</div>';
                 echo '<div class="movie-content">';
                 echo '<div class="movie-poster">';
-                echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa">';
+                echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
                  if (!empty($video_url)) {
                     ?>
               <div class="video-container">
