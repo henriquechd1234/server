@@ -200,7 +200,7 @@
 .movie {
     display: flex;
     flex-direction: columm;
-    align-items: center;
+/*     align-items: center; */
     margin: 10px; /* Menor margem entre os filmes */
     padding: 15px;
     background-color: #333;
