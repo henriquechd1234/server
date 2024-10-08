@@ -96,7 +96,7 @@ echo '</div>';
                             <?php echo '<a class="info" href="avaliacao.php?id='  . $row2['id'] . '">Mais Informações</a>'?>
                         </div>
                     </div>
-               <?php while ($row3 = $sql_query->fetch_assoc()){ ?>
+               
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
