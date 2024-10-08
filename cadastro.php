@@ -24,7 +24,7 @@
             $verificador = $sql_q -> num_rows;
 
             if($verificador > 0 ) {
-               $error = '<p>' . 'Email ou usuario ja existente, por favor use outro nome ou email' . '</p>';
+               $error[] = '<p>' . 'Email ou usuario ja existente, por favor use outro nome ou email' . '</p>';
             }else {
                 
                 $result = $sql_q -> num_rows;
