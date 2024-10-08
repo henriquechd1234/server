@@ -105,18 +105,17 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             <button type="submit">Enviar Avaliação</button>
         </form>
 
-    </div>
         <?php
         }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             if (!isset($_SESSION['id'])) {
                 echo "Usuário não está logado. Por favor, faça login.";
-                exit;
+                
             }
 
             $id_user = $_SESSION['id'];
             if (!is_numeric($id_user)) {
                 echo "ID do usuário inválido.";
-                exit;
+               
             }
 
             $avali = $_POST['avaliacao'];
@@ -154,5 +153,6 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             }
         }
         ?>
+    </div>
 </body>
 </html>
