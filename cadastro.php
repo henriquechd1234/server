@@ -20,9 +20,15 @@
             $senha = $_POST['password'];
             
             $veri="SELECT * FROM cadastro WHERE (username = '$user') or (email = '$email')";
-             $sql_q = $mysqli-> query($veri) or die ("Falha na execução". $mysqli->error);
-            $result = $sql_q -> num_rows;
-            if($result == 0){
+            $sql_q = $mysqli-> query($veri) or die ("Falha na execução". $mysqli->error);
+            $verificador = $sql_q -> num_rows;
+
+            if($verificador > 0 ) {
+                echo '<p>' . 'Ja existe alguem com o mesmo nome ou o mesmo email, por favor mude' . '</p>';
+            }else {
+                
+                $result = $sql_q -> num_rows;
+                if($result == 0){
              
                         $sql= "INSERT INTO cadastro (nome,email,senha,username) VALUES ('$nome','$email','$senha','$user')";
                         $sql_query = $mysqli-> query($sql) or die ("Falha na execução". $mysqli->error);
