@@ -68,7 +68,7 @@
 while($row = $result->fetch_assoc()) {
     echo '<div class="movie">'; 
         echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '">'; 
-        echo '<h3 style="color: white;">' . $row['nome'] . '</h3>'; /
+        echo '<h3 style="color: white;">' . $row['nome'] . '</h3>'; 
         echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>'; 
     echo '</div>';
 }
