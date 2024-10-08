@@ -106,6 +106,26 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
         </form>
 
         <?php
+            $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = cadastro.id WHERE imagens_id = ?");
+            $stmt_avaliacao->bind_param('i', $id);
+            $stmt_avaliacao->execute();
+            $result_avaliacao = $stmt_avaliacao->get_result();
+
+            if ($result_avaliacao->num_rows > 0) {
+                echo '<div class="avaliacoes">';
+                echo '<h3>Avaliações:</h3>';
+                while ($avaliacaoRow = $result_avaliacao->fetch_assoc()) {
+                   
+                    echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
+                    echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
+                    echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
+                  
+                }
+                echo '</div>';
+            } else {
+                echo '<p>Nenhuma avaliação disponível para este filme.</p>';
+            }
+        
         }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             if (!isset($_SESSION['id'])) {
                 echo "Usuário não está logado. Por favor, faça login.";
@@ -132,26 +152,6 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             }
 
             // Exibir avaliações após envio
-            $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = cadastro.id WHERE imagens_id = ?");
-            $stmt_avaliacao->bind_param('i', $id);
-            $stmt_avaliacao->execute();
-            $result_avaliacao = $stmt_avaliacao->get_result();
-
-            if ($result_avaliacao->num_rows > 0) {
-                echo '<div class="avaliacoes">';
-                echo '<h3>Avaliações:</h3>';
-                while ($avaliacaoRow = $result_avaliacao->fetch_assoc()) {
-                   
-                    echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
-                    echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
-                    echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
-                  
-                }
-                echo '</div>';
-            } else {
-                echo '<p>Nenhuma avaliação disponível para este filme.</p>';
-            }
-        }
         ?>
     </div>
 </body>
