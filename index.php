@@ -199,7 +199,7 @@
 }
 .movie {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 10px; /* Menor margem entre os filmes */
     padding: 15px;
