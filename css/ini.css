@@ -87,7 +87,15 @@ body {
 }
 .top-ten-section .top-ten-container .top-ten-grid .movie-card img {
   width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .movie-card img {
+    max-height: 180px;
+  }
 }
 .top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info {
   margin-top: 10px;
@@ -148,6 +156,7 @@ body {
 @media (max-width: 600px) {
   .navbar {
     padding: 10px;
+    flex-direction: column;
   }
   .top-ten-section {
     padding: 10px;
@@ -159,64 +168,80 @@ body {
     max-height: 150px;
   }
 }
+
 .slider-container {
-    position: relative;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* Slide */
 .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%; /* 3 filmes */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .slide {
-    min-width: 100%;
-    position: relative;
+  min-width: 100%;
+  position: relative;
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 .slide-info {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .slide-info h3 {
-    font-size: 16px;
-    margin: 0;
+  font-size: 16px;
+  margin: 0;
 }
 
 .slide-info h2 {
-    font-size: 24px;
-    margin: 5px 0 0 0;
+  font-size: 24px;
+  margin: 5px 0 0 0;
 }
 
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
 .next {
-    right: 10px;
+  right: 10px;
 }
 
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+@media (max-width: 600px) {
+  .prev, .next {
+    padding: 8px;
+  }
 }
 
