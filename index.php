@@ -193,23 +193,23 @@
     <style>
     .movie-container {
         display: flex;
-        flex-direction: row; /* Força a direção dos itens ser em linha */
-        flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas caso necessário */
-        justify-content: center; /* Centraliza os itens horizontalmente */
+        flex-wrap: wrap; /* Permite que os filmes quebrem em várias linhas se necessário */
+        justify-content: center; /* Centraliza os filmes horizontalmente */
         gap: 20px; /* Espaçamento entre os filmes */
-        margin: 20px;
+        padding: 20px;
     }
 
     .movie {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Mantém o conteúdo interno na vertical */
         align-items: center;
+        width: 200px; /* Define a largura fixa de cada item */
+        margin: 10px;
         padding: 15px;
         background-color: #333;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-        width: 200px; /* Define a largura padrão para os filmes */
     }
 
     .movie img {
