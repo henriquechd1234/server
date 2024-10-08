@@ -84,9 +84,13 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '</div>';
                 echo '<div class="movie-details">';
                 echo '<p class="synopsis">' . $row['descricao'] . '</p>';
+                echo $row['tempo_de_filme'];
+                echo $row['diretor'];
+                echo $row ['elenco_principal'];
+                echo $row ['titulo_original'];
                 echo '</div>';
                 echo '</div>';
-                echo '</main>';
+                echo '</main>'; 
             } else {
                 echo 'Nenhum filme encontrado.';
             }
