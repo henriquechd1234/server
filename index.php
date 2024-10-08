@@ -96,8 +96,10 @@ echo '</div>';
                             <?php echo '<a class="info" href="avaliacao.php?id='  . $row2['id'] . '">Mais Informações</a>'?>
                         </div>
                     </div>
+                    <?php } ?>
                
     <div class="slider-container">
+                <?php while ($row3 = $sql_query -> fetch_assoc()){ ?>
         <div class="slider">
             <div class="slide">
                 <!-- Corrigido para exibir a imagem corretamente usando echo -->
@@ -124,8 +126,8 @@ echo '</div>';
                 </div>
             </div>
         </div>
-    </div>
 <?php } ?>
+    </div>
                 <?php } ?>
 
     <style>
