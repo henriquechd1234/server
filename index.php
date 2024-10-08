@@ -128,7 +128,6 @@ echo '</div>';
         </div>
         <?php } ?>
     </div>
-                <?php } ?>
 
     <style>
 .container {
