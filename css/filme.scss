@@ -1,4 +1,5 @@
-body {
+/* Geral */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,7 +42,7 @@ body {
     border: none;
     border-radius: 5px 0 0 5px;
     outline: none;
-    width: 80%;
+    width: calc(100% - 40px); /* Ocupa 100% menos o botão */
 }
 
 .search-container button {
@@ -63,6 +64,9 @@ body {
     height: 2px;
     background-color: #ffffff;
     margin: 10px 0;
+    position: relative;
+    top: 50px; /* Compensa a barra fixa */
+    z-index: 999;
 }
 
 /* Conteúdo principal */
@@ -110,9 +114,10 @@ body {
 /* Avaliações */
 .review-container {
     margin-top: 30px;
-    background-color: #444;
+    background-color: #222;
     padding: 20px;
     border-radius: 10px;
+    color: #ddd;
 }
 
 .review-container h2 {
@@ -125,12 +130,17 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
 }
 
 .review-container input[type="number"] {
     width: 50px;
     padding: 5px;
     margin-bottom: 10px;
+    background-color: #333;
+    border: none;
+    color: #fff;
 }
 
 .review-container button {
@@ -139,6 +149,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .review-container button:hover {
@@ -159,4 +170,35 @@ body {
 
 .avaliacao-item p {
     margin-bottom: 5px;
+}
+
+.avaliacao-item strong {
+    color: #ff9900;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .movie {
+        max-width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-container input {
+        width: 80%;
+    }
+
+    .search-container button {
+        width: 20%;
+    }
+
+    .review-container {
+        padding: 15px;
+    }
+
+    .avaliacao-item {
+        padding: 10px;
+    }
 }
