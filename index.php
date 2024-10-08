@@ -82,12 +82,12 @@ echo '</div>';
             $sql_query = $mysqli -> query($code_filmes);
         ?>
      <hr class="espacamento">
-                    <?php while ($row2 = $sql_query -> fetch_assoc()){ ?>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
                 <button class="prev-button">&#10094;</button> 
                 <div class="top-ten-grid">
+                    <?php while ($row2 = $sql_query -> fetch_assoc()){ ?>
                     
                     <div class="movie-card">
                         <img src="<?php echo $row2['foto']; ?>" alt="">
