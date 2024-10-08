@@ -93,7 +93,7 @@ echo '</div>';
                         <img src="<?php echo $row2['foto']; ?>" alt="">
                         <div class="movie-info">
                             <h3><?php echo $row2 ['nome']?></h3>
-                            <a href="avaliacao.php"><button>Avaliar</button></a>
+                            <?php echo '<a class="info" href="avaliacao.php?id='  . $row['id'] . '">Mais Informações</a>'?>
                         </div>
                     </div>
                     <?php } ?>
