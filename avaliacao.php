@@ -140,7 +140,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             if (!is_numeric($id_user)) {
                 echo "ID do usuário inválido.";
                
-            }
+            }else{
 
             $avali = $_POST['avaliacao'];
             $nota = $_POST['nota'];
