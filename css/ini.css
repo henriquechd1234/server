@@ -43,7 +43,8 @@ body {
   border: none;
   border-radius: 5px 0 0 5px;
   outline: none;
-  width: calc(100% - 40px); /* Ocupa 100% menos o botão */
+  width: calc(100% - 40px);
+  /* Ocupa 100% menos o botão */
 }
 
 .search-container button {
@@ -66,7 +67,8 @@ body {
   background-color: #ffffff;
   margin: 10px 0;
   position: relative;
-  top: 50px; /* Compensa a barra fixa */
+  top: 50px;
+  /* Compensa a barra fixa */
   z-index: 999;
 }
 
@@ -75,7 +77,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 90px; /* Espaço para compensar a barra fixa */
+  padding-top: 90px;
+  /* Espaço para compensar a barra fixa */
 }
 
 /* Estilos dos filmes */
@@ -91,11 +94,14 @@ body {
 }
 
 .movie img {
-  width: 200px; /* Largura fixa */
-  height: 300px; /* Altura fixa */
-  -o-object-fit: cover;
-     object-fit: cover; /* Corta a imagem para se ajustar ao tamanho definido */
-  border-radius: 10px; /* Manter o arredondamento dos cantos, se necessário */
+  width: 200px;
+  /* Largura fixa */
+  height: 300px;
+  /* Altura fixa */
+  object-fit: cover;
+  /* Corta a imagem para se ajustar ao tamanho definido */
+  border-radius: 10px;
+  /* Manter o arredondamento dos cantos, se necessário */
 }
 
 .movie h2 {
@@ -184,18 +190,23 @@ body {
   .movie {
     max-width: 100%;
   }
+
   .search-container {
     width: 100%;
   }
+
   .search-container input {
     width: 80%;
   }
+
   .search-container button {
     width: 20%;
   }
+
   .review-container {
     padding: 15px;
   }
+
   .avaliacao-item {
     padding: 10px;
   }
@@ -214,4 +225,4 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
