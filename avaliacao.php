@@ -141,11 +141,11 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '<div class="avaliacoes">';
                 echo '<h3>Avaliações:</h3>';
                 while ($avaliacaoRow = $result_avaliacao->fetch_assoc()) {
-                    echo '<div class="avaliacao-item">';
+                   
                     echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
                     echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
                     echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
-                    echo '</div>';
+                  
                 }
                 echo '</div>';
             } else {
