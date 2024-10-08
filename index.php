@@ -99,7 +99,7 @@ echo '</div>';
                     <?php } ?>
                
     <div class="slider-container">
-                <?php while ($row3 = $sql_query -> fetch_assoc()){ ?>
+                <?php $row3 = $sql_query -> fetch_assoc();?>
         <div class="slider">
             <div class="slide">
                 <!-- Corrigido para exibir a imagem corretamente usando echo -->
@@ -126,7 +126,7 @@ echo '</div>';
                 </div>
             </div>
         </div>
-<?php } ?>
+        <?php } ?>
     </div>
                 <?php } ?>
 
