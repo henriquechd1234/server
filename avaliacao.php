@@ -84,10 +84,10 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '</div>';
                 echo '<div class="movie-details">';
                 echo '<p class="synopsis">' . $row['descricao'] . '</p>';
-                echo '<p>' "Tempo de duração:" . $row['tempo_de_filme'] . '</p>';
-                echo '<p>' "Diretor:" . $row['diretor'] . '</p>';
-                echo '<p>' "Elenco Principal:" .$row ['elenco_principal'] . '</p>';
-                echo '<p>' "Titulo Principal:" .$row ['titulo_original'] . '</p>';
+                echo '<p>' 'Tempo de duração:' . $row['tempo_de_filme'] . '</p>';
+                echo '<p>' 'Diretor:' . $row['diretor'] . '</p>';
+                echo '<p>' 'Elenco Principal:' .$row ['elenco_principal'] . '</p>';
+                echo '<p>' 'Titulo Principal:' .$row ['titulo_original'] . '</p>';
                 echo '</div>';
                 echo '</div>';
                 echo '</main>'; 
