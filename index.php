@@ -122,10 +122,10 @@ echo '</div>';
                     <h3>Filme da Semana</h3>
                     <h2>Third Movie</h2>
                 </div>
+<?php } ?>
             </div>
         </div>
     </div>
-<?php } ?>
 
     <style>
 .container {
