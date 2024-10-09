@@ -151,6 +151,8 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
 
             if ($envio === TRUE) {
                 echo "Avaliação enviada com sucesso!";
+                header("Location: avaliacao.php");
+                exit();
             } else {
                 echo "Erro ao enviar a avaliação: " . $mysqli->error;
             }
