@@ -69,7 +69,7 @@
                 }
             }
         }else{
-          $code_filmes =  "SELECT nome, descricao, foto, AVG(avaliacao) AS media_avaliacao
+          $code_filmes =  "SELECT nome, descricao, foto, AVG(nota) AS media_avaliacao
                 FROM imagens
                 GROUP BY id
                 ORDER BY media_avaliacao DESC
