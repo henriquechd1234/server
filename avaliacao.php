@@ -144,13 +144,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
             $envio = $mysqli->query($inserir);
 
-            if ($envio === TRUE) {
-                
-                header("Location: avaliacao.php");
-                exit();
-            } else {
-                echo "Erro ao enviar a avaliação: " . $mysqli->error;
-            }
+           
 }
 }
             // Exibir avaliações após envio
