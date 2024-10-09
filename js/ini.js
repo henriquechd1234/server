@@ -46,3 +46,25 @@ function moveSlide(direction) {
 setInterval(() => {
     moveSlide(1);
 }, 5000);
+
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+const carouselItems = document.querySelector('.carousel-items');
+
+let scrollAmount = 0;
+
+prevButton.addEventListener('click', () => {
+  carouselItems.scrollBy({
+    top: 0,
+    left: -300, // valor do deslocamento ao clicar
+    behavior: 'smooth'
+  });
+});
+
+nextButton.addEventListener('click', () => {
+  carouselItems.scrollBy({
+    top: 0,
+    left: 300, // valor do deslocamento ao clicar
+    behavior: 'smooth'
+  });
+});
