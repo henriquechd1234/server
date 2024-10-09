@@ -145,7 +145,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             $envio = $mysqli->query($inserir);
 
             if ($envio === TRUE) {
-                echo "Avaliação enviada com sucesso!";
+                
                 header("Location: avaliacao.php");
                 exit();
             } else {
