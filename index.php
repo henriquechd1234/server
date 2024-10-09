@@ -158,7 +158,7 @@
         }
     ?>
     <style>
-movie {
+.movie {
     display: flex; /* Mantém o layout flex para alinhar os conteúdos do filme */
     flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
     align-items: center; /* Centraliza os itens dentro do filme */
