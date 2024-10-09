@@ -102,10 +102,20 @@
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
+
+
+            <? php
+            $fotos-container = "SELECT FROM imagens WHERE foto IN (1,2,3)";
+            $fotos-query = $mysqli -> query($fotos-container);
+
+                if ($fotos_query && $fotos_query->num_rows > 0) {
+
+            ?>
     <div class="slider-container">
+                    <?php while ( $foto = $fotos_query -> fetch_assoc()){ ?>
         <div class="slider">
             <div class="slide">
-                <img src="https://imgs.search.brave.com/XG3MfJAYNN9eEsQ_igKEz5rnQJm-zaIIJeQuz_JycCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZWdh/ZG9kYWRjLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNy90aGUtYmF0/bWFuLTItdmlsYW8t/bGVnYWRvZGFkYy53/ZWJw" alt="The Batman">
+                <img src="<?php $foto['foto'] ?>" alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
                     <h2>The Batman</h2>
@@ -126,7 +136,14 @@
                 </div>
             </div>
         </div>
+            <?php } ?>
     </div>
+
+<?php  } ?>
+
+
+
+
 
   <section class="carousel">
     <h2>Sugestões dos Criadores</h2>
