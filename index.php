@@ -69,9 +69,10 @@
                 }
             }
         }else{
-          $code_filmes =  "SELECT nome, descricao, foto, AVG(nota) AS media_avaliacao
-                FROM imagens
-                GROUP BY id
+          $code_filmes =  "SELECT i.nome, i.descricao, i.foto, AVG(a.nota) AS media_avaliacao
+                FROM imagens i
+                JOIN avaliacao a ON i.id = a.imagens_id
+                GROUP BY i.id
                 ORDER BY media_avaliacao DESC
                 LIMIT 10";
 
