@@ -125,6 +125,33 @@
             </div>
         </div>
     </div>
+
+  <section class="carousel">
+    <h2>Sugestões dos Criadores</h2>
+    <div class="carousel-container">
+      <div class="carousel-items">
+        <div class="item">
+          <img src="capa-do-filme-de-volta-para-o-futuro-2.webp" alt="Filme 1">
+          <h3>De volta para o Futuro</h3>
+          <span>Recomendado por: Felipe Garcia</span>
+          <p>Masterpiece!</p>
+        </div>
+        <div class="item">
+          <img src="batmanimages4.webp" alt="Filme 2">
+          <h3>The Batman</h3>
+          <span>Recomendado por: David</span>
+          <p>Filme simplesmente sensacional! Revolucionou a indústria de filmes da DC, que há tempos não apresentava algo de qualidade.</p>
+        </div>
+        <div class="item">
+          <img src="Destaque-Duna-2021.webp" alt="Filme 3">
+          <h3>Dune 2</h3>
+          <span>Recomendado por: Cauã Henrique</span>
+          <p>Filmaço da porra!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <?php 
         }
     ?>
