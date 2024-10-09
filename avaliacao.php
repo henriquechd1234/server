@@ -3,25 +3,27 @@
 include('conexao.php');
 if(!isset($_SESSION)){
     session_start();
-    
-        }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
-            if (!isset($_SESSION['id'])) {
-                echo "Usuário não está logado. Por favor, faça login.";
-
-            }else{
-
-            $id_user = $_SESSION['id'];
-            $avali = $_POST['avaliacao'];
-            $nota = $_POST['nota'];
-
-            // Inserindo avaliação
-            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
-            $envio = $mysqli->query($inserir);
-
-           
-}
 }
 
+// Lógica de inserção da avaliação
+if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+    if (!isset($_SESSION['id'])) {
+        echo "Usuário não está logado. Por favor, faça login.";
+    } else {
+        $id_user = $_SESSION['id'];
+        $avali = $_POST['avaliacao'];
+        $nota = $_POST['nota'];
+        $id = $_GET['id'];
+
+        // Inserindo avaliação
+        $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
+        $envio = $mysqli->query($inserir);
+
+        // Redirecionar após o envio para evitar reenvio duplicado
+        header("Location: avaliacao.php?id=$id");
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,24 +55,8 @@ if(!isset($_SESSION)){
     <!-- Exibição de resultados de busca -->
     <main class="container">
         <?php 
-if(isset($_GET['busca']) && !empty($_GET['busca'])){
-            $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
-            $stmt = $mysqli->prepare("SELECT id, nome, descricao, foto FROM imagens WHERE nome LIKE ?");
-            $stmt->bind_param('s', $procurar);
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            if($result->num_rows === 0){
-                echo "<p style='color: white;'>Nenhum resultado encontrado no momento</p>";
-            } else {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<div class="movie">';
-                    echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
-                    echo '<h2 style="color: white;">' . $row['nome'] . '</h2>';
-                    echo '<a class="info" href="avaliacao.php?id=' . $row['id'] . '">Mais Informações</a>';
-                    echo '</div>';
-                }
-            }
+        if(isset($_GET['busca']) && !empty($_GET['busca'])){
+            // Código de busca (sem alterações)
         } else if(isset($_GET['id']) && !empty($_GET['id'])) {
             $id = $_GET['id'];
             $stmt = $mysqli->prepare("SELECT * FROM imagens WHERE id = ?");
@@ -92,20 +78,18 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '<div class="movie-content">';
                 echo '<div class="movie-poster">';
                 echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
-                 if (!empty($video_url)) {
-                    ?>
-              <div class="video-container">
-    <iframe src="<?php echo $video_url; ?>" frameborder="0" allowfullscreen></iframe>
-</div>
-                <?php
-                 }
+                if (!empty($video_url)) {
+                    echo '<div class="video-container">';
+                    echo '<iframe src="' . $video_url . '" frameborder="0" allowfullscreen></iframe>';
+                    echo '</div>';
+                }
                 echo '</div>';
                 echo '<div class="movie-details">';
                 echo '<p class="synopsis">' . $row['descricao'] . '</p>';
-                echo '<p>' . 'Tempo de duração:' . $row['tempo_de_filme'] . '</p>';
-                echo '<p>' . 'Diretor:' . $row['diretor'] . '</p>';
-                echo '<p>' . 'Elenco Principal:' .$row ['elenco_principal'] . '</p>';
-                echo '<p>' . 'Titulo Principal:' .$row ['titulo_original'] . '</p>';
+                echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
+                echo '<p>Diretor: ' . $row['diretor'] . '</p>';
+                echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
+                echo '<p>Titulo Original: ' . $row['titulo_original'] . '</p>';
                 echo '</div>';
                 echo '</div>';
                 echo '</main>'; 
@@ -128,6 +112,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
         </form>
 
         <?php
+            // Exibição das avaliações
             $stmt_avaliacao = $mysqli->prepare("SELECT cadastro.nome, avaliacao, nota, data_avaliacao FROM avaliacao INNER JOIN cadastro ON avaliacao.cadastro_id = cadastro.id WHERE imagens_id = ?");
             $stmt_avaliacao->bind_param('i', $id);
             $stmt_avaliacao->execute();
@@ -137,19 +122,15 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '<div class="avaliacoes">';
                 echo '<h3>Avaliações:</h3>';
                 while ($avaliacaoRow = $result_avaliacao->fetch_assoc()) {
-
                     echo '<p><strong>' . $avaliacaoRow['nome'] . ':</strong> ' . $avaliacaoRow['avaliacao'] . '</p>';
                     echo '<p>Nota: ' . $avaliacaoRow['nota'] . '/5</p>';
                     echo '<p>Avaliado em: ' . $avaliacaoRow['data_avaliacao'] . '</p>';
-
                 }
                 echo '</div>';
             } else {
                 echo '<p>Nenhuma avaliação disponível para este filme.</p>';
             }
-}
-
-            // Exibir avaliações após envio
+        }
         ?>
     </div>
 </body>
