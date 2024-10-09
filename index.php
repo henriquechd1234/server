@@ -158,41 +158,47 @@
         }
     ?>
     <style>
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os filmes desçam para a linha de baixo se não houver espaço */
+    margin-top: 120px;
+    gap: 20px; /* Espaçamento entre os filmes */
+}
+
 .movie {
-    display: flex; /* Mantém o layout flex para alinhar os conteúdos do filme */
-    flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
-    align-items: center; /* Centraliza os itens dentro do filme */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 200px; /* Largura fixa para cada filme */
-    margin: 10px; /* Espaço ao redor de cada filme */
-    padding: 15px; /* Espaço dentro de cada filme */
-    background-color: #333; /* Cor de fundo do filme */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+    margin: 10px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Estilo para a imagem do filme */
 .movie img {
-    width: 100%; /* Imagem ocupa toda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Bordas arredondadas para a imagem */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra na imagem */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Botão de informações */
 .info {
-    display: block; /* O botão ocupa 100% da largura */
-    width: 100%; /* Largura total do botão */
-    padding: 5px 0; /* Espaçamento interno */
-    background-color: #555; /* Cor de fundo do botão */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    color: #fff; /* Cor do texto */
-    margin-top: auto; /* Botão vai para o final do container do filme */
-    text-align: center; /* Centraliza o texto no botão */
-    text-decoration: none; /* Remove o sublinhado do texto */
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
     margin-top: 10px;
+    text-decoration: none;
 }
 </style>
 
