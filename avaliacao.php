@@ -147,6 +147,7 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
             } else {
                 echo '<p>Nenhuma avaliação disponível para este filme.</p>';
             }
+}
 
             // Exibir avaliações após envio
         ?>
