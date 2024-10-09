@@ -136,12 +136,12 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
 
             }
 
-            $id_user = $_SESSION['id'];
             if (!is_numeric($id_user)) {
                 echo "ID do usuário inválido.";
 
             }else{
 
+            $id_user = $_SESSION['id'];
             $avali = $_POST['avaliacao'];
             $nota = $_POST['nota'];
 
