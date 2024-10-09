@@ -69,12 +69,12 @@
                 }
             }
         }else{
-          $code_filmes = SELECT i.nome, i.descricao, i.foto, AVG(a.avaliacao) AS media_avaliacao
+          $code_filmes = "SELECT i.nome, i.descricao, i.foto, AVG(a.avaliacao) AS media_avaliacao
             FROM imagens i
             JOIN cadastro a ON i.id = a.imagens_id
             GROUP BY i.id
             ORDER BY media_avaliacao DESC
-            LIMIT 10;
+            LIMIT 10";
 
             $sql_query = $mysqli -> query($code_filmes);
             
