@@ -3,7 +3,25 @@
 include('conexao.php');
 if(!isset($_SESSION)){
     session_start();
+    
+        }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+            if (!isset($_SESSION['id'])) {
+                echo "Usuário não está logado. Por favor, faça login.";
+
+            }else{
+
+            $id_user = $_SESSION['id'];
+            $avali = $_POST['avaliacao'];
+            $nota = $_POST['nota'];
+
+            // Inserindo avaliação
+            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
+            $envio = $mysqli->query($inserir);
+
+           
 }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -130,23 +148,6 @@ if(isset($_GET['busca']) && !empty($_GET['busca'])){
                 echo '<p>Nenhuma avaliação disponível para este filme.</p>';
             }
 
-        }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
-            if (!isset($_SESSION['id'])) {
-                echo "Usuário não está logado. Por favor, faça login.";
-
-            }else{
-
-            $id_user = $_SESSION['id'];
-            $avali = $_POST['avaliacao'];
-            $nota = $_POST['nota'];
-
-            // Inserindo avaliação
-            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
-            $envio = $mysqli->query($inserir);
-
-           
-}
-}
             // Exibir avaliações após envio
         ?>
     </div>
