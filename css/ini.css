@@ -356,7 +356,7 @@ h2 {
   }
   
   .slide img {
-    width: 100%;
+    max-width: 300px;
     height: 100%;
     object-fit: cover; /* Garante que a imagem cubra toda a área */
   }
