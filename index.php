@@ -105,8 +105,8 @@
 
 
             <?php
-            $fotos-container = "SELECT * FROM imagens WHERE id IN (1,2,3)";
-            $fotos-query = $mysqli -> query($fotos-container);
+            $fotos_container = "SELECT * FROM imagens WHERE id IN (1,2,3)";
+            $fotos_query = $mysqli -> query($fotos_container);
 
                 if ($fotos_query && $fotos_query->num_rows > 0) {
 
