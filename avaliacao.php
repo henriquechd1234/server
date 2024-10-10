@@ -67,7 +67,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
            
 
             if($row = $result->fetch_assoc()){
-                  $total = "SELECT COUNT(*) AS total_avaliacoes
+                  $total = "SELECT COUNT(*) AS total_avaliacoes, AVG(nota) AS media_nota
                     FROM avaliacao
                     WHERE imagens_id = ? ";
                 
@@ -77,18 +77,9 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 $total_query = $stmt_total->get_result();
                 $ava = $total_query->fetch_assoc();
 
-                $total_ava = $ava['total_avaliacoes'];   //aqui e a parte que pega as avaliações e isso ai pae e nois,vapo demaissssssssssssssssssssssssssssssssssssssssssssssssssss.
-
-                $total_estrela = "SELECT COUNT(*) AS total_nota
-                FROM avaliacao
-                WHERE imagens_id = ? ";
-                $stmt_total2 = $mysqli->prepare($total_estrela);
-                $stmt_total2->bind_param('i', $id); // Passando o ID corretamente
-                $stmt_total2->execute();
-
-                $estrelas_query = $stmt_total2 -> get_result();
-                $nota= $total_query->fetch_assoc();
-                $star = $nota['total_nota'];
+                $total_ava = $ava['total_avaliacoes'];   //aqui e a parte que pega as avaliações e as  notas  e isso ai pae e nois,vapo demaissssssssssssssssssssssssssssssssssssssssssssssssssss.
+                $total_star = $ava['media_nota'];
+                
 
                
                 
@@ -98,7 +89,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-header">';
                 echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
                 echo '<div class="rating">';
-                echo '<span>⭐'. $star . '</span>';
+                echo '<span>⭐'. $total_star . '</span>';
                 echo '<p>'. $total_ava.' avaliações</p>';
                 echo '</div>';
                 echo '</div>';
