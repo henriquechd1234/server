@@ -6,7 +6,6 @@ body {
   color: white;
 }
 
-/* Barra de navegação */
 .navbar {
   display: flex;
   flex-direction: column;
@@ -14,6 +13,7 @@ body {
   justify-content: space-between;
   background-color: #141313;
   padding: 10px 20px;
+  color: white;
 }
 
 .navbar .logo img {
@@ -22,7 +22,7 @@ body {
 }
 
 .navbar .login-btn {
-  background-color: rgba(58, 48, 48, 0.8);
+  background-color: rgba(58, 48, 48, 0.7960784314);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -60,6 +60,7 @@ body {
   }
 
   .navbar .search-container {
+    width: auto;
     flex-grow: 1;
     justify-content: flex-start;
   }
