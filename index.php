@@ -107,7 +107,7 @@
             $fotos_query = $mysqli -> query($fotos_container);
 
                 if ($fotos_query && $fotos_query->num_rows > 0) {
-@@ -115,144 +115,146 @@
+
             <div class="slide">
                 <img src="<?php echo $foto['url']; ?>" alt="The Batman">
                 <div class="slide-info">
