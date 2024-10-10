@@ -62,7 +62,7 @@
                 }
                 else{
                     while ($row= $result -> fetch_assoc()){
-                        echo '<div class "container">';
+                        echo '<div class = "container">';
                         echo '<div class="movie">';
                         echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
                         echo '<h2 style="color: white";>' . $row['nome'] . '</h2>';
@@ -117,14 +117,12 @@
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
                 </div>
-    <?php } ?>
             </div>
         </div>
 
     </div>
-
-
-
+    <?php } ?>
+                <?php } ?>
 
 
   <section class="carousel">
