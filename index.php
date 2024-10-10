@@ -2,7 +2,10 @@
 <?php 
 
     include('conexao.php');
-       session_start();
+       
+    if(!isset($_SESSION)){
+             session_start();
+            }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -32,9 +35,6 @@
         </form>
           <?php
 
-    if(!isset($_SESSION)){
-             session_start();
-            }
             if ($_SESSION == TRUE){
 
              echo ('<a style="text-decoration: none; color: aliceblue;" href="desconectar.php"><span>Sair</span></a>');
