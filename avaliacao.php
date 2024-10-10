@@ -71,6 +71,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                     FROM avaliacao
                     WHERE imagens_id = '$id'";
                       $total_query = $mysqli -> query($total);
+                $ava = $total_query -> fetch_assoc();
 
                 
 
@@ -81,7 +82,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-header">';
                 echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
                 echo '<div class="rating">';
-                echo '<span>⭐' . $total_query  .'</span>';
+                echo '<span>⭐' . $ava  .'</span>';
                 echo '<p>4,8 mil avaliações</p>';
                 echo '</div>';
                 echo '</div>';
