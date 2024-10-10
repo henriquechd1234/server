@@ -149,7 +149,36 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             } else {
                 echo '<p>Nenhuma avaliação disponível para este filme.</p>';
             }
-        }
+        }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
+            if (!isset($_SESSION['id'])) {
+                echo "Usuário não está logado. Por favor, faça login.";
+
+            }
+
+            $id_user = $_SESSION['id'];
+            if (!is_numeric($id_user)) {
+                echo "ID do usuário inválido.";
+
+            }else{
+
+            $avali = $_POST['avaliacao'];
+            $nota = $_POST['nota'];
+
+            // Inserindo avaliação
+            $inserir = "INSERT INTO avaliacao (cadastro_id, avaliacao, nota, imagens_id) VALUES ('$id_user','$avali', '$nota', '$id')";
+            $envio = $mysqli->query($inserir);
+
+            if ($envio === TRUE) {
+                echo "Avaliação enviada com sucesso!";
+                header("Location: avaliacao.php");
+                exit();
+            } else {
+                echo "Erro ao enviar a avaliação: " . $mysqli->error;
+            }
+}
+}
+            // Exibir avaliações após envio
+        ?>
         ?>
     </div>
 </body>
