@@ -107,6 +107,7 @@
             $fotos_query = $mysqli -> query($fotos_container);
 
             $baner = $fotos_query -> etch_assoc()
+                ?>
     <div class="slider-container">
                    
         <div class="slider">
