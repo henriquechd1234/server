@@ -155,12 +155,9 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 
             }
 
+            else{
+
             $id_user = $_SESSION['id'];
-            if (!is_numeric($id_user)) {
-                echo "ID do usuário inválido.";
-
-            }else{
-
             $avali = $_POST['avaliacao'];
             $nota = $_POST['nota'];
 
