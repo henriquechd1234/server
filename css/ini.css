@@ -176,6 +176,26 @@ body {
   border-radius: 10px;
 }
 
+.slide-info {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.slide-info h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.slide-info h2 {
+  font-size: 24px;
+  margin: 5px 0 0 0;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -201,8 +221,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .slider-container {
-    height: 300px;
+  .prev, .next {
+    padding: 8px;
   }
 }
 
