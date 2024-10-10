@@ -88,7 +88,7 @@
             <div class="top-ten-container">
                 <button class="prev-button">&#10094;</button> 
                 <div class="top-ten-grid">
-                    <?php while ($row2 = $sql_query -> fetch_assoc()){ ?>
+                    <?php if ($row2 = $sql_query -> fetch_assoc()){ ?>
 
                     <div class="movie-card">
                         <img src="<?php echo $row2['foto']; ?>" alt="">
@@ -137,7 +137,6 @@
             <?php } ?>
     </div>
 
-<?php  } ?>
 <?php  } ?>
 
 
