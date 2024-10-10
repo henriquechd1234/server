@@ -64,14 +64,24 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             $stmt->execute();
             $result = $stmt->get_result();
 
+           
+
             if($row = $result->fetch_assoc()){
+                  $total = "SELECT COUNT(*) AS total_avaliacoes
+                    FROM avaliacoes
+                    WHERE imagens_id = '$id'";
+                      $total_query = $mysql -> query($total);
+
+                
+
+                
                 $video_url = $row['trailer']; 
                 echo '<main class="content">';
                 echo '<div class="container">';
                 echo '<div class="movie-header">';
                 echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
                 echo '<div class="rating">';
-                echo '<span>⭐ 5,7/10</span>';
+                echo '<span>⭐' . $total_query  .'</span>';
                 echo '<p>4,8 mil avaliações</p>';
                 echo '</div>';
                 echo '</div>';
