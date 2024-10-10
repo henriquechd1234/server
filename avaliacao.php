@@ -175,7 +175,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 }
 }
             // Exibir avaliações após envio
-        ?>
+       
         ?>
     </div>
 </body>
