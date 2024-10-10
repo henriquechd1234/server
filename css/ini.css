@@ -1,9 +1,12 @@
+/* Reset básico */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #141313;
+  color: white;
 }
 
+/* Barra de navegação */
 .navbar {
   display: flex;
   flex-direction: column;
@@ -11,7 +14,6 @@ body {
   justify-content: space-between;
   background-color: #141313;
   padding: 10px 20px;
-  color: white;
 }
 
 .navbar .logo img {
@@ -20,7 +22,7 @@ body {
 }
 
 .navbar .login-btn {
-  background-color: rgba(58, 48, 48, 0.7960784314);
+  background-color: rgba(58, 48, 48, 0.8);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -58,7 +60,6 @@ body {
   }
 
   .navbar .search-container {
-    width: auto;
     flex-grow: 1;
     justify-content: flex-start;
   }
@@ -68,10 +69,10 @@ body {
   }
 }
 
+/* Seção de top 10 */
 .top-ten-section {
   padding: 20px;
   background-color: #141313;
-  color: white;
 }
 
 .top-ten-section .top-ten-container {
@@ -106,106 +107,7 @@ body {
   border-radius: 10px;
 }
 
-.movie-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 350px; /* Tamanho fixo para o card */
-  width: 200px;  /* Tamanho fixo para o card */
-  margin: 10px; /* Espaçamento entre os cards */
-  overflow: hidden; /* Para evitar que o conteúdo "vaze" do card */
-}
-
-.movie-card img {
-  width: 100%;
-  height: auto;
-  max-height: 250px; /* Define uma altura máxima para os banners */
-  object-fit: cover; /* Ajusta a imagem ao contêiner sem distorcer */
-}
-
-.movie-card button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-}
-
 @media (max-width: 600px) {
-  .movie-card {
-    height: 300px; /* Ajuste de altura para telas menores */
-    width: 150px;  /* Ajuste de largura para telas menores */
-  }
-
-  .movie-card img {
-    max-height: 200px; /* Ajuste a altura da imagem para telas menores */
-  }
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info {
-  margin-top: 10px;
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info h3 {
-  font-size: 16px;
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info button {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .top-ten-section .top-ten-container .top-ten-grid .movie-card {
-    max-width: 150px;
-  }
-}
-
-.top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
-    display: block;
-  }
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  border: 2px solid #ccc;
-  border-radius: 25px;
-  padding: 5px 10px;
-  max-width: 300px;
-  background-color: #f9f9f9;
-}
-
-.search-container input[type=text] {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 16px;
-  background-color: transparent;
-}
-
-.search-container button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.search-container button img {
-  width: 20px;
-  height: 20px;
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    padding: 10px;
-    flex-direction: column;
-  }
-
   .top-ten-section {
     padding: 10px;
   }
@@ -219,8 +121,7 @@ body {
   }
 }
 
-
-
+/* Carrossel */
 .slider-container {
   position: relative;
   max-width: 100%;
@@ -249,26 +150,6 @@ body {
   border-radius: 10px;
 }
 
-.slide-info {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.slide-info h3 {
-  font-size: 16px;
-  margin: 0;
-}
-
-.slide-info h2 {
-  font-size: 24px;
-  margin: 5px 0 0 0;
-}
-
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -294,17 +175,12 @@ body {
 }
 
 @media (max-width: 600px) {
-  .prev, .next {
-    padding: 8px;
+  .slider-container {
+    height: 300px;
   }
 }
 
-body {
-  background-color: #000;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
+/* Itens do carrossel */
 .carousel {
   margin: 20px auto;
   width: 90%;
@@ -344,73 +220,29 @@ h2 {
   border-radius: 5px;
 }
 
-.carousel-prev, .carousel-next {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 1;
-}
-
-.carousel-prev {
-  left: 0;
-}
-
-.carousel-next {
-  right: 0;
-}
-
 @media (max-width: 600px) {
-  /* Ajuste no tamanho dos cards de filme */
-  .movie-card {
-    max-width: 100%; /* Card ocupando toda a largura disponível no mobile */
-  }
-  
-  .movie-card img {
-    width: 100%; /* Imagem preenche todo o card */
-    height: 250px; /* Altura fixa para uniformidade */
-    object-fit: cover; /* Garante que a imagem seja cortada para caber bem */
-  }
-
-  /* Ajuste no slider de imagens */
-  .slider-container {
-    height: 300px; /* Reduz a altura do slider no mobile */
-  }
-  
-  .slide img {
-    max-width: 300px;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra toda a área */
-  }
-
-  /* Ajuste no carousel */
   .carousel-items {
     display: flex;
-    flex-wrap: nowrap; /* Impede que os itens quebrem linha */
-    overflow-x: auto; /* Permite scroll horizontal no mobile */
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
-  
+
   .item {
-    min-width: 100%; /* Item ocupa toda a largura */
+    min-width: 100%;
     margin-right: 0;
   }
-  
+
   .item img {
-    width: 100%; /* Imagem preenche todo o item */
-    height: 200px; /* Altura fixa para imagens consistentes */
-    object-fit: cover;
+    width: 100%;
+    height: 200px;
   }
 }
 
+/* Footer */
 .footer {
   background-color: #141313;
-  color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -422,7 +254,7 @@ h2 {
 }
 
 .footer-content strong {
-  color: #FFD700; /* Dourado para destacar o nome Pinova */
+  color: #FFD700; /* Dourado */
 }
 
 @media (max-width: 600px) {
