@@ -86,8 +86,8 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-header">';
                 echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
                 echo '<div class="rating">';
-                echo '<span>⭐' . $total_ava .'</span>';
-                echo '<p>4,8 mil avaliações</p>';
+                echo '<span>⭐</span>';
+                echo '<p>'. $total_ava.'avaliações</p>';
                 echo '</div>';
                 echo '</div>';
                 echo '<div class="movie-content">';
