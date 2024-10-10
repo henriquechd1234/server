@@ -1,9 +1,8 @@
-
 <?php 
 
     include('conexao.php');
     session_start();
-            
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -32,7 +31,8 @@
             ?>
         </form>
           <?php
-        if(!isset($_SESSION)){
+
+    if(!isset($_SESSION)){
              session_start();
             }
             if ($_SESSION == TRUE){
@@ -106,7 +106,7 @@
 
 
             <?php
-            $fotos_container = "SELECT * FROM fotos WHERE id IN (1,2,3)";
+            $fotos_container = "SELECT * FROM imagens WHERE id IN (1,2,3)";
             $fotos_query = $mysqli -> query($fotos_container);
 
                 if ($fotos_query && $fotos_query->num_rows > 0) {
@@ -175,12 +175,6 @@
     <?php 
         }
     ?>
-<footer class="footer">
-  <div class="footer-content">
-    <p>&copy; 2024 David Martins e Caua Henrique. Todos os direitos reservados.</p>
-    <p>Desenvolvido por <strong>Pinova</strong></p>
-  </div>
-</footer>
     <style>
 .movie {
     display: flex; /* Mantém o layout flex para alinhar os conteúdos do filme */
