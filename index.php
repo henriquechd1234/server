@@ -106,14 +106,12 @@
             $fotos_container = "SELECT * FROM baner WHERE id IN (1,2,3)";
             $fotos_query = $mysqli -> query($fotos_container);
 
-                if ($fotos_query && $fotos_query->num_rows > 0) {
-
-            ?>
+            $baner = $fotos_query -> etch_assoc())
     <div class="slider-container">
-                    <?php while ( $foto = $fotos_query -> fetch_assoc()){ ?>
+                   
         <div class="slider">
             <div class="slide">
-                <img src="<?php echo $foto['url']; ?>" alt="The Batman">
+                <img src=" <?php $baner['id'] ?> "alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
