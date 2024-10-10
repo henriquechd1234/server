@@ -69,7 +69,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             if($row = $result->fetch_assoc()){
                   $total = "SELECT COUNT(*) AS total_avaliacoes
                     FROM avaliacao
-                    WHERE imagens_id = '?";
+                    WHERE imagens_id = ? ";
                 
                 $stmt_total = $mysqli->prepare($total);
                 $stmt_total->bind_param('i', $id); // Passando o ID corretamente
