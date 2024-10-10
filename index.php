@@ -1,3 +1,4 @@
+
 <?php 
 
     include('conexao.php');
@@ -106,13 +107,11 @@
             $fotos_container = "SELECT * FROM baner WHERE id IN (1,2,3)";
             $fotos_query = $mysqli -> query($fotos_container);
 
-            $baner = $fotos_query -> etch_assoc()
-                ?>
-    <div class="slider-container">
-                   
-        <div class="slider">
+                if ($fotos_query && $fotos_query->num_rows > 0) {
+                    ?>
+
             <div class="slide">
-                <img src=" <?php $baner['id'] ?> "alt="The Batman">
+                <img src="<?php echo $foto['url']; ?>" alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
@@ -120,7 +119,7 @@
             </div>
             <br>
             <div class="slide">
-                <img src="https://imgs.search.brave.com/XG3MfJAYNN9eEsQ_igKEz5rnQJm-zaIIJeQuz_JycCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZWdh/ZG9kYWRjLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNy90aGUtYmF0/bWFuLTItdmlsYW8t/bGVnYWRvZGFkYy53/ZWJw" alt="Another Movie">
+                <img src="<?php echo $foto['url']; ?>" alt="Another Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana #2</h3>
                     <h2>Dune 2</h2>
@@ -128,7 +127,7 @@
             </div>
             <br>
             <div class="slide">
-                <img src="https://imgs.search.brave.com/XG3MfJAYNN9eEsQ_igKEz5rnQJm-zaIIJeQuz_JycCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZWdh/ZG9kYWRjLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNy90aGUtYmF0/bWFuLTItdmlsYW8t/bGVnYWRvZGFkYy53/ZWJw" alt="Third Movie">
+                <img src="<?php echo $foto['url']; ?>" alt="Third Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana #3</h3>
                     <h2>Homem Aranha de Volta ao Lar</h2>
@@ -138,7 +137,7 @@
             <?php } ?>
     </div>
 
-
+<?php  } ?>
 
 
 
@@ -176,6 +175,10 @@
     <p>Desenvolvido por <strong>Pinova</strong></p>
   </div>
 </footer>
+
+    <?php 
+        }
+    ?>
 
     <style>
 .movie {
