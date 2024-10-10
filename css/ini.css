@@ -1,411 +1,128 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #141313;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141313;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #141313;
-  padding: 10px 20px;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141313;
+    padding: 10px 20px;
+    color: white;
 }
 
 .navbar .logo img {
-  height: 30px;
-  margin-right: 20px;
-}
-
-.navbar .login-btn {
-  background-color: rgba(58, 48, 48, 0.7960784314);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 16px;
-}
-
-.navbar .login-btn:hover {
-  background-color: #0062cc;
-}
-
-@media (max-width: 768px) {
-  .navbar .login-btn {
-    display: none;
-  }
+    height: 30px;
+    margin-right: 20px;
 }
 
 .navbar .search-container {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar .search-container input[type=text] {
-  width: 100%;
-  max-width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
-  }
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 
-  .navbar .search-container {
-    width: auto;
-    flex-grow: 1;
-    justify-content: flex-start;
-  }
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .navbar .right-menu {
-    margin-left: auto;
-  }
+.info {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.info:hover {
+    background-color: #666;
 }
 
 .top-ten-section {
-  padding: 20px;
-  background-color: #141313;
-  color: white;
+    padding: 20px;
+    background-color: #141313;
+    color: white;
 }
 
-.top-ten-section .top-ten-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
+.top-ten-container {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
 }
 
-.top-ten-section .top-ten-container .top-ten-grid {
-  display: flex;
-  gap: 10px;
-  scroll-behavior: smooth;
-  overflow-x: auto;
+.top-ten-grid {
+    display: flex;
+    gap: 10px;
 }
 
-.top-ten-section .top-ten-container .top-ten-grid .movie-card {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 200px;
-  padding: 10px;
-  background-color: #333;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card img {
-  width: 100%;
-  height: auto;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-@media (max-width: 600px) {
-  .movie-card img {
-    max-height: 180px;
-  }
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info {
-  margin-top: 10px;
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info h3 {
-  font-size: 16px;
-}
-
-.top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info button {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .top-ten-section .top-ten-container .top-ten-grid .movie-card {
-    max-width: 150px;
-  }
-}
-
-.top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .top-ten-section .top-ten-container .prev-button, .top-ten-section .top-ten-container .next-button {
-    display: block;
-  }
-}
-
-.espacamento {
-  border: none;
-  height: 2px;
-  background-color: white;
-  margin: 10px 0;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  border: 2px solid #ccc;
-  border-radius: 25px;
-  padding: 5px 10px;
-  max-width: 300px;
-  background-color: #f9f9f9;
-}
-
-.search-container input[type=text] {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 16px;
-  background-color: transparent;
-}
-
-.search-container button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.search-container button img {
-  width: 20px;
-  height: 20px;
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    padding: 10px;
+.movie-card {
+    display: flex;
     flex-direction: column;
-  }
-
-  .top-ten-section {
-    padding: 10px;
-  }
-
-  .movie-card {
-    max-width: 100px;
-  }
-
-  .movie-card img {
-    max-height: 120px;
-  }
-}
-
-.slider-container {
-  position: relative;
-  max-width: 100%;
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 450px;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
-.slide {
-  min-width: 100%;
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-}
-
-.slide-info {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.slide-info h3 {
-  font-size: 16px;
-  margin: 0;
-}
-
-.slide-info h2 {
-  font-size: 24px;
-  margin: 5px 0 0 0;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-@media (max-width: 600px) {
-  .prev, .next {
-    padding: 8px;
-  }
-}
-
-body {
-  background-color: #000;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-.carousel {
-  margin: 20px auto;
-  width: 90%;
-  max-width: 1200px;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  border-left: 5px solid yellow;
-  padding-left: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    width: 200px;
 }
 
 .carousel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
+    display: flex;
+    overflow: hidden;
 }
 
 .carousel-items {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-
-.item {
-  min-width: 300px;
-  margin-right: 10px;
-  background-color: #1c1c1c;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .item img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.carousel-prev, .carousel-next {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 1;
-}
-
-.carousel-prev {
-  left: 0;
-}
-
-.carousel-next {
-  right: 0;
-}
-
-@media (max-width: 600px) {
-  /* Ajuste no tamanho dos cards de filme */
-  .movie-card {
-    max-width: 100%; /* Card ocupando toda a largura disponível no mobile */
-  }
-  
-  .movie-card img {
-    width: 100%; /* Imagem preenche todo o card */
-    height: 250px; /* Altura fixa para uniformidade */
-    object-fit: cover; /* Garante que a imagem seja cortada para caber bem */
-  }
-
-  /* Ajuste no slider de imagens */
-  .slider-container {
-    height: 300px; /* Reduz a altura do slider no mobile */
-  }
-  
-  .slide img {
-    max-width: 300px;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra toda a área */
-  }
-
-  /* Ajuste no carousel */
-  .carousel-items {
-    display: flex;
-    flex-wrap: nowrap; /* Impede que os itens quebrem linha */
-    overflow-x: auto; /* Permite scroll horizontal no mobile */
-  }
-  
-  .item {
-    min-width: 100%; /* Item ocupa toda a largura */
-    margin-right: 0;
-  }
-  
-  .item img {
-    width: 100%; /* Imagem preenche todo o item */
-    height: 200px; /* Altura fixa para imagens consistentes */
-    object-fit: cover;
-  }
+    width: 100%;
+    border-radius: 10px;
 }
 
 .footer {
-  background-color: #141313;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+    background-color: #141313;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
 }
 
-.footer-content p {
-  margin: 5px 0;
-  font-size: 14px;
+@media (max-width: 480px) {
+    .movie {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .top-ten-container {
+        flex-direction: column;
+    }
 }
-
-.footer-content strong {
-  color: #FFD700; /* Dourado para destacar o nome Pinova */
-}
-
-@media (max-width: 600px) {
-  .footer {
-    padding: 15px;
-  }
-
-  .footer-content p {
-    font-size: 12px;
-  }
-}
-
