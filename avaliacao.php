@@ -90,7 +90,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 $nota= $total_query->fetch_assoc();
                 $star = $nota['total_nota'];
 
-               );
+               
                 
                 $video_url = $row['trailer']; 
                 echo '<main class="content">';
