@@ -188,6 +188,17 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .movie-card img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+@media (max-width: 480px) {
+  .movie-card img {
+    max-width: 60px;
+    max-height: 60px; }
+
 .slider-container {
   position: relative;
   max-width: 100%;
