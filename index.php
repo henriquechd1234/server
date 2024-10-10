@@ -2,9 +2,7 @@
 <?php 
 
     include('conexao.php');
-       
-
-             session_start();
+    session_start();
             
 ?>
 <!DOCTYPE html>
@@ -34,7 +32,9 @@
             ?>
         </form>
           <?php
-
+        if(!isset($_SESSION)){
+             session_start();
+            }
             if ($_SESSION == TRUE){
 
              echo ('<a style="text-decoration: none; color: aliceblue;" href="desconectar.php"><span>Sair</span></a>');
@@ -106,7 +106,7 @@
 
 
             <?php
-            $fotos_container = "SELECT * FROM baner WHERE id IN (1)";
+            $fotos_container = "SELECT * FROM fotos WHERE id IN (1,2,3)";
             $fotos_query = $mysqli -> query($fotos_container);
 
                 if ($fotos_query && $fotos_query->num_rows > 0) {
