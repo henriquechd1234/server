@@ -111,29 +111,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px; 
+  height: 350px; /* Tamanho fixo para o card */
+  width: 200px;  /* Tamanho fixo para o card */
+  margin: 10px; /* Espaçamento entre os cards */
+  overflow: hidden; /* Para evitar que o conteúdo "vaze" do card */
 }
 
-.movie-card .movie-info {
-  margin-top: auto; 
+.movie-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px; /* Define uma altura máxima para os banners */
+  object-fit: cover; /* Ajusta a imagem ao contêiner sem distorcer */
 }
 
 .movie-card button {
   position: absolute;
-  bottom: 10px; 
+  bottom: 10px;
   left: 50%;
-  transform: translateX(-50%); 
-  width: 80%; 
+  transform: translateX(-50%);
+  width: 80%;
 }
 
 @media (max-width: 600px) {
   .movie-card {
-    height: 300px; 
+    height: 300px; /* Ajuste de altura para telas menores */
+    width: 150px;  /* Ajuste de largura para telas menores */
   }
 
-  .movie-card button {
-    width: 90%; 
-    bottom: 5px; 
+  .movie-card img {
+    max-height: 200px; /* Ajuste a altura da imagem para telas menores */
   }
 }
 
