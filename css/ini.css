@@ -126,6 +126,16 @@ body {
   width: 80%; 
 }
 
+@media (max-width: 600px) {
+  .movie-card {
+    height: 300px; 
+  }
+
+  .movie-card button {
+    width: 90%; 
+    bottom: 5px; 
+  }
+}
 
 .top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info {
   margin-top: 10px;
