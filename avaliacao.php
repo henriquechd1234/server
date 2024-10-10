@@ -67,7 +67,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
            
 
             if($row = $result->fetch_assoc()){
-                  $total = "SELECT COUNT(*) AS total_avaliacoes, AVG(nota) AS media_nota
+                  $total = "SELECT COUNT(*) AS total_avaliacoes, SUM(nota) AS media_nota
                     FROM avaliacao
                     WHERE imagens_id = ? ";
                 
