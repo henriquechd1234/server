@@ -187,11 +187,11 @@ body {
   }
 
   .movie-card {
-    max-width: 120px;
+    max-width: 100px;
   }
 
   .movie-card img {
-    max-height: 150px;
+    max-height: 120px;
   }
 }
 
