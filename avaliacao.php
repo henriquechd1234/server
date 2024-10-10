@@ -68,7 +68,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 
             if($row = $result->fetch_assoc()){
                   $total = "SELECT COUNT(*) AS total_avaliacoes
-                    FROM avaliacoes
+                    FROM avaliacao
                     WHERE imagens_id = '$id'";
                       $total_query = $mysqli -> query($total);
 
