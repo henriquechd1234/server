@@ -69,12 +69,15 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             if($row = $result->fetch_assoc()){
                   $total = "SELECT COUNT(*) AS total_avaliacoes
                     FROM avaliacao
-                    WHERE imagens_id = '$id'";
-                      $total_query = $mysqli -> query($total);
-                $ava = $total_query -> fetch_assoc();
-                $total_avaliacoes = $ava['total_avaliacoes'];
-
+                    WHERE imagens_id = '?";
                 
+                $stmt_total = $mysqli->prepare($total);
+                $stmt_total->bind_param('i', $id); // Passando o ID corretamente
+                $stmt_total->execute();
+                $total_query = $stmt_total->get_result();
+                $ava = $total_query->fetch_assoc();
+
+                 $total_avaliacoes = $ava['total_avaliacoes'];
 
                 
                 $video_url = $row['trailer']; 
