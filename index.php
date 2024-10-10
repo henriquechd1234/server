@@ -121,8 +121,8 @@
         </div>
 
     </div>
-    <?php } ?>
-                <?php } ?>
+    
+            
 
 
   <section class="carousel">
