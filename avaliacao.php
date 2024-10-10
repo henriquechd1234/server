@@ -77,7 +77,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 $total_query = $stmt_total->get_result();
                 $ava = $total_query->fetch_assoc();
 
-                 $total_avaliacoes = $ava['total_avaliacoes'];
+                 $total_ava = $ava['total_avaliacoes'];
 
                 
                 $video_url = $row['trailer']; 
@@ -86,7 +86,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-header">';
                 echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
                 echo '<div class="rating">';
-                echo '<span>⭐' . $total_avaliacoe  .'</span>';
+                echo '<span>⭐' . $total_ava .'</span>';
                 echo '<p>4,8 mil avaliações</p>';
                 echo '</div>';
                 echo '</div>';
