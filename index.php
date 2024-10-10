@@ -45,6 +45,7 @@
         ?>
 
     </nav>
+
     <?php 
             if(isset($_GET['busca'])&& !empty($_GET['busca'])){
                   $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
@@ -80,8 +81,8 @@
                 LIMIT 10";
 
             $sql_query = $mysqli -> query($code_filmes);
-
         ?>
+        <div class="space"> <hr class= espacamento><div/>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
@@ -97,8 +98,6 @@
                         </div>
                     </div>
                     <?php } ?>
-
-                     <p class="espacamento"></p>
                     </div>
                 <button class="next-button">&#10095;</button> 
             </div>
@@ -248,6 +247,12 @@
   }
 }
 
+.espacamento {
+  border: none;
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
+}
 </style>
 
     <script src="../js/ini.js"></script>
