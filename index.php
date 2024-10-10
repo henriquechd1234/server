@@ -176,9 +176,7 @@
   </div>
 </footer>
 
-    <?php 
-        }
-    ?>
+    
 
     <style>
 .movie {
