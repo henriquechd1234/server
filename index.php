@@ -116,7 +116,7 @@
                     <?php while ( $foto = $fotos_query -> fetch_assoc()){ ?>
         <div class="slider">
             <div class="slide">
-                <img src="<?php echo $foto['foto']; ?>" alt="The Batman">
+                <img src="<?php echo $foto['url']; ?>" alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana</h3>
                     <h2>The Batman</h2>
