@@ -70,7 +70,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                   $total = "SELECT COUNT(*) AS total_avaliacoes
                     FROM avaliacoes
                     WHERE imagens_id = '$id'";
-                      $total_query = $mysql -> query($total);
+                      $total_query = $mysqli -> query($total);
 
                 
 
