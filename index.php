@@ -82,7 +82,6 @@
             $sql_query = $mysqli -> query($code_filmes);
 
         ?>
-     <hr class="espacamento">
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
