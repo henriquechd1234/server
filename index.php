@@ -103,15 +103,11 @@
             </div>
 
 
-            <?php
-            $fotos_container = "SELECT * FROM baner WHERE id IN (1,2,3)";
-            $fotos_query = $mysqli -> query($fotos_container);
-
-                if ($fotos_query && $fotos_query->num_rows > 0) {
-                    ?>
+        
+           
 
             <div class="slide">
-                <img src="<?php echo $foto['url']; ?>" alt="The Batman">
+                <img src="" alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
@@ -119,7 +115,7 @@
             </div>
             <br>
             <div class="slide">
-                <img src="<?php echo $foto['url']; ?>" alt="Another Movie">
+                <img src="" alt="Another Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana #2</h3>
                     <h2>Dune 2</h2>
@@ -127,14 +123,14 @@
             </div>
             <br>
             <div class="slide">
-                <img src="<?php echo $foto['url']; ?>" alt="Third Movie">
+                <img src="" alt="Third Movie">
                 <div class="slide-info">
                     <h3>Filme da Semana #3</h3>
                     <h2>Homem Aranha de Volta ao Lar</h2>
                 </div>
             </div>
         </div>
-            <?php } ?>
+       
     </div>
 
 <?php  } ?>
