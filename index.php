@@ -247,7 +247,7 @@
 }
 
 .espacamento {
-  height: 2px;
+  height: 6px;
   background-color: white;
 }
 </style>
