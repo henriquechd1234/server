@@ -175,6 +175,12 @@
     <?php 
         }
     ?>
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 David Martins e Caua Henrique. Todos os direitos reservados.</p>
+    <p>Desenvolvido por <strong>Pinova</strong></p>
+  </div>
+</footer>
     <style>
 .movie {
     display: flex; /* Mantém o layout flex para alinhar os conteúdos do filme */
