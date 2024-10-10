@@ -247,9 +247,9 @@
 }
 
 .espacamento {
-  width: 2px;
+  heigt: 2px;
   background-color: white;
-}
+  border: none;
 </style>
 
     <script src="../js/ini.js"></script>
