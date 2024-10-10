@@ -172,9 +172,17 @@
     </div>
   </section>
 
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 David Martins e Caua Henrique. Todos os direitos reservados.</p>
+    <p>Desenvolvido por <strong>Pinova</strong></p>
+  </div>
+</footer>
+
     <?php 
         }
     ?>
+
     <style>
 .movie {
     display: flex; /* Mantém o layout flex para alinhar os conteúdos do filme */
@@ -212,6 +220,35 @@
     text-decoration: none; /* Remove o sublinhado do texto */
     margin-top: 10px;
 }
+.footer {
+  background-color: #141313;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-content strong {
+  color: #FFD700; /* Dourado para destacar o nome Pinova */
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-content p {
+    font-size: 12px;
+  }
+}
+
 </style>
 
     <script src="../js/ini.js"></script>
