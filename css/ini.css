@@ -106,11 +106,26 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  .movie-card img {
-    max-height: 180px;
-  }
+.movie-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px; 
 }
+
+.movie-card .movie-info {
+  margin-top: auto; 
+}
+
+.movie-card button {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 80%; 
+}
+
 
 .top-ten-section .top-ten-container .top-ten-grid .movie-card .movie-info {
   margin-top: 10px;
