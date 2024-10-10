@@ -159,10 +159,7 @@
   </div>
 </footer>
 
-    <?php 
-        }
-    ?>
-
+  
     <style>
 .movie {
     display: flex; /* Mantém o layout flex para alinhar os conteúdos do filme */
