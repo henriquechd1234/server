@@ -80,6 +80,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 $total_ava = $ava['total_avaliacoes'];   //aqui e a parte que pega as avaliações e as  notas  e isso ai pae e nois,vapo demaissssssssssssssssssssssssssssssssssssssssssssssssssss.
                 $total_star = $ava['media_nota'];
                 
+                $media_nota = ($total_star / $total_ava) * 2;
 
                
                 
@@ -89,7 +90,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-header">';
                 echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
                 echo '<div class="rating">';
-                echo '<span>⭐'. $total_star . '</span>';
+                echo '<span>⭐'. number_format($media_nota, 2) . '</span>';
                 echo '<p>'. $total_ava.' avaliações</p>';
                 echo '</div>';
                 echo '</div>';
