@@ -106,7 +106,7 @@
             $fotos_container = "SELECT * FROM baner WHERE id IN (1,2,3)";
             $fotos_query = $mysqli -> query($fotos_container);
 
-            $baner = $fotos_query -> etch_assoc())
+            $baner = $fotos_query -> etch_assoc()
     <div class="slider-container">
                    
         <div class="slider">
