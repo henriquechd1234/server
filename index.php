@@ -109,6 +109,7 @@
             $baners = [];
                 while($row3 = $fotos_query -> fetch_assoc()){
                     $baners[] = $row3;
+                }
 ?>
             <div class="slide">
                 <?php foreach ($baners as $baner): ?>
