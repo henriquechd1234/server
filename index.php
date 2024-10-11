@@ -124,8 +124,8 @@
                     <h2>AranhaVerso</h2>
                 </div>
                 <br>
-    <?php endforeach; ?>
             </div>
+    <?php endforeach; ?>
         </div>
     </div>
 
