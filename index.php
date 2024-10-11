@@ -62,7 +62,7 @@
                 }
                 else{
                     while ($row= $result -> fetch_assoc()){
-                        echo '<div class "container">';
+                        echo '<div class ="container">';
                         echo '<div class="movie">';
                         echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
                         echo '<h2 style="color: white";>' . $row['nome'] . '</h2>';
