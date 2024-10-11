@@ -118,7 +118,7 @@
             <div class="slider">
             <div class="slide">
                 <?php foreach ($baners as $baner): ?>
-                <img src="<?php echo $baner['url']; ?>" alt="The Batman">
+                <img src="<?php $baner['url']; ?>" alt="The Batman">
                 <div class="slide-info">
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
