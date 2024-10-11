@@ -125,9 +125,9 @@
         </div>
         <?php endforeach; ?>
     </div>
-</div>
 <button id="prev">Anterior</button>
 <button id="next">Próximo</button>
+</div>
         
 
 
