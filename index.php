@@ -123,8 +123,8 @@
                     <h3>Filme da Semana #1</h3>
                     <h2><?php echo $baner['nome'] ?></h2>
                 </div>
-            </div>
            <?php endforeach; ?>
+            </div>
             <br>
         </div>
     </div>
