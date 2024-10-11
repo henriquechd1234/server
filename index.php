@@ -112,6 +112,8 @@
                 }
 ?>
                 <br>
+            <div class="slider-container">
+            <div class="slider">
             <div class="slide">
                 <?php foreach ($baners as $baner): ?>
                 <img src="<?php echo $baner['url']; ?>" alt="The Batman">
