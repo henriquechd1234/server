@@ -118,6 +118,7 @@
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
                 </div>
+                <br>
     <?php endforeach; ?>
             </div>
         </div>
