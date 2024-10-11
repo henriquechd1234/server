@@ -84,8 +84,7 @@
         <div class="space"> <hr class= espacamento><div/>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
-            <div class="top-ten-container">
-                <button class="prev-button">&#10094;</button> 
+            <div class="top-ten-container">
                 <div class="top-ten-grid">
                     <?php while ($row2 = $sql_query -> fetch_assoc()){ ?>
 
@@ -97,8 +96,7 @@
                         </div>
                     </div>
                     <?php } ?>
-                    </div>
-                <button class="next-button">&#10095;</button> 
+                    </div>
             </div>
 
 
