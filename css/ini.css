@@ -148,32 +148,25 @@ body {
 }
 
 /* Carrossel */
-.slider-container {
-  position: relative;
-  max-width: 100%;
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 450px;
+.slides-container {
+    display: flex; /* Alinha os filhos em uma linha */
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    white-space: nowrap; /* Evita que os filhos quebrem para a próxima linha */
 }
 
+.slide {
+    margin-right: 20px; /* Espaço entre as imagens */
+    /* Defina uma largura para as imagens se necessário */
+}
+
+.slide img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
-}
-
-.slide {
-  min-width: 100%;
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
 }
 
 .slide-info {
