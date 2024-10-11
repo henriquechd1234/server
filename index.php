@@ -119,14 +119,13 @@
         <div class="slide">
             <img src="<?php echo $baner['url']; ?>" alt="The Batman">
             <div class="slide-info">
-                <h3>Filme da Semana #1</h3>
+                
                 <h2><?php echo $baner['nome'] ?></h2>
             </div>
         </div>
         <?php endforeach; ?>
     </div>
-<button id="prev">Anterior</button>
-<button id="next">Próximo</button>
+
 </div>
         
 
