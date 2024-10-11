@@ -124,15 +124,7 @@
                     <h2>AranhaVerso</h2>
                 </div>
             </div>
-                <div class="slide">
-                <?php foreach ($baners as $baner): ?>
-                <img src="<?php echo $baner['url']; ?>" alt="The Batman">
-                <div class="slide-info">
-                    <h3>Filme da Semana #1</h3>
-                    <h2>AranhaVerso</h2>
-                </div>
-            </div>
-                <?php endforeach; ?>
+           <?php endforeach; ?>
             <br>
         </div>
     </div>
@@ -165,7 +157,7 @@
       </div>
     </div>
   </section>
-
+<?php  } ?>
 
 <footer class="footer">
   <div class="footer-content">
