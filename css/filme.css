@@ -70,6 +70,14 @@ body {
   z-index: 999;
 }
 
+.banner-conta {
+width: 350px;
+}
+
+@media (max-width: 600px) {
+width: 50% }
+
+
 /* Conteúdo principal */
 .container {
   max-width: 1200px;
