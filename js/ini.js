@@ -72,6 +72,12 @@ let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
+function updateSlider() {
+    const slider = document.getElementById('slider');
+    const translateXValue = -currentIndex * 100;  // Move 100% para a esquerda a cada slide
+    slider.style.transform = `translateX(${translateXValue}%)`;
+}
+
 document.getElementById('next').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlider();
@@ -82,9 +88,11 @@ document.getElementById('prev').addEventListener('click', () => {
     updateSlider();
 });
 
-function updateSlider() {
-    const slider = document.getElementById('slider');
-    const translateXValue = -currentIndex * 100;  // Move 100% para a esquerda a cada slide
-    slider.style.transform = `translateX(${translateXValue}%)`;
+// Função para alternar slides automaticamente
+function autoSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
 }
 
+// Intervalo de 3 segundos para alternar automaticamente os slides
+setInterval(autoSlide, 3000);
