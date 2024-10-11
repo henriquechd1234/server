@@ -156,12 +156,10 @@ body {
   overflow: hidden;
   height: 450px;
 }
-
 .slide { 
    max-width: 100%; /* Tamanho da imagem */
     height: auto;
 }
-
 .slide img {
    max-width: 100%; /* Tamanho da imagem */
     height: auto; /* Mantém a proporção */
@@ -212,6 +210,7 @@ body {
 .prev {
   left: 10px;
 }
+
 
 .next {
   right: 10px;
