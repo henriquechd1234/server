@@ -239,6 +239,6 @@
   margin: 10px 0;
 </style>
 
-    <script src="../js/ini.js"></script>
+    <script src="js/ini.js"></script>
 </body>
 </html>
