@@ -68,3 +68,23 @@ nextButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+});
+
+function updateSlider() {
+    const slider = document.getElementById('slider');
+    const translateXValue = -currentIndex * 100;  // Move 100% para a esquerda a cada slide
+    slider.style.transform = `translateX(${translateXValue}%)`;
+}
+
