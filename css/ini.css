@@ -158,8 +158,8 @@ body {
 }
 
 .slide { 
-  min-width: 100%;
-  position: relative;
+   max-width: 100%; /* Tamanho da imagem */
+    height: auto;
 }
 
 .slide img {
