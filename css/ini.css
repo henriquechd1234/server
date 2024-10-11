@@ -149,20 +149,19 @@ body {
 /* ------------------------------------CAUA MEXEU NESSE  CODIGO ------------------------------------------*/
 /* Carrossel */
 .slides-container {
-    display: grid; /* Usa o grid layout */
-    grid-auto-flow: column; /* Coloca os itens em colunas */
+    display: flex; /* Para exibição horizontal */
     overflow-x: auto; /* Permite a rolagem horizontal */
+    white-space: nowrap; /* Impede a quebra de linha */
 }
 
 .slide {
-    margin-right: 20px; /* Espaço entre as imagens */
+    margin-right: 20px; /* Espaçamento entre as imagens */
 }
 
 .slide img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Tamanho da imagem */
+    height: auto; /* Mantém a proporção */
 }
-
 /* ----------------------------------------------------------------------------------------------*/
 .slider {
   display: flex;
