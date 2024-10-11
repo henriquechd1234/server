@@ -137,7 +137,7 @@
         </div>
     </div>
 
-            
+        
 
 
   <section class="carousel">
@@ -165,7 +165,7 @@
       </div>
     </div>
   </section>
-<?php } ?>
+
 
 <footer class="footer">
   <div class="footer-content">
