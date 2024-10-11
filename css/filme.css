@@ -70,12 +70,12 @@ body {
   z-index: 999;
 }
 
-.banner-conta {
-width: 350px;
+.banner {
+width: 100% ;
+height: 100%;
+display: flex;
+overflow: hidden;
 }
-
-@media (max-width: 600px) {
-width: 50% }
 
 
 /* Conteúdo principal */
