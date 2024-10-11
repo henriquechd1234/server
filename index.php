@@ -128,7 +128,8 @@
             <br>
         </div>
     </div>
-
+<button id="prev">Anterior</button>
+<button id="next">Próximo</button>
         
 
 
