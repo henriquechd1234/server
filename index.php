@@ -101,7 +101,7 @@
                     <?php } ?>
                     <p class="espacamento"></p>
                     </div>
-                <button class="next-button">&#10095;</button> 
+                
             </div>
 
            <?php
