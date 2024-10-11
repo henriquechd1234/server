@@ -82,7 +82,8 @@
             $sql_query = $mysqli -> query($code_filmes);
         ?>
         <div class="space"> <hr class= espacamento><div/>
-        <img src="img/=banner.png" alt="" class="banner-conta">
+        
+        <div class="banner" <img src="img/=banner.png" alt=""<div/>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
