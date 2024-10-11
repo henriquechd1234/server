@@ -150,12 +150,12 @@ body {
 /* Carrossel */
 .slider-container {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Esconde as imagens fora da área visível */
     position: relative;
 }
 
 .slide {
-    min-width: 100%;
+    min-width: 100%; /* Cada slide ocupa 100% da largura do contêiner */
     box-sizing: border-box;
 }
 
@@ -166,9 +166,8 @@ body {
 /* ----------------------------------------------------------------------------------------------*/
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; /* Suaviza a transição ao mudar de slide */
 }
-
 .slide-info {
   position: absolute;
   bottom: 10px;
@@ -198,6 +197,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 10; /* Coloca os botões acima do slider */
 }
 
 .prev:hover, .next:hover {
