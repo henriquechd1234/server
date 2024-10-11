@@ -113,6 +113,7 @@
         $baners[] = $row3;
     }
 ?>
+<br>
 <div class="slider-container">
     <div class="slider" id="slider">
         <?php foreach ($baners as $baner): ?>
@@ -127,7 +128,7 @@
     </div>
 
 </div>
-        
+       <br> 
 
 
   <section class="carousel">
