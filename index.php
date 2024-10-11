@@ -99,10 +99,10 @@
                         </div>
                     </div>
                     <?php } ?>
+                    <p class="espacamento"></p>
                     </div>
-
+                <button class="next-button">&#10095;</button> 
             </div>
-
 
             <?php
             $fotos_container = "SELECT * FROM baner WHERE id IN (1,2,3)";
