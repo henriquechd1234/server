@@ -111,6 +111,7 @@
                     $baners[] = $row3;
                 }
 ?>
+                <br>
             <div class="slide">
                 <?php foreach ($baners as $baner): ?>
                 <img src="<?php echo $baner['url']; ?>" alt="The Batman">
