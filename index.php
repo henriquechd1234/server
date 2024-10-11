@@ -123,7 +123,6 @@
     <?php endforeach; ?>
             </div>
         </div>
-<?php } ?>
     </div>
 
             
@@ -154,6 +153,7 @@
       </div>
     </div>
   </section>
+<?php } ?>
 
 <footer class="footer">
   <div class="footer-content">
