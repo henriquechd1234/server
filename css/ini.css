@@ -159,7 +159,7 @@ body {
 }
 
 .slide img {
-    max-width: 50%; /* Tamanho da imagem */
+    max-width: 100%; /* Tamanho da imagem */
     height: auto; /* Mantém a proporção */
 }
 /* ----------------------------------------------------------------------------------------------*/
