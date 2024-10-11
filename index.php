@@ -104,30 +104,28 @@
                 <button class="next-button">&#10095;</button> 
             </div>
 
-            <?php
-            $fotos_container = "SELECT * FROM baner WHERE id IN (1,3)";
-            $fotos_query = $mysqli -> query($fotos_container);
+           <?php
+    $fotos_container = "SELECT * FROM baner WHERE id IN (1,3)";
+    $fotos_query = $mysqli->query($fotos_container);
 
-            $baners = [];
-                while($row3 = $fotos_query -> fetch_assoc()){
-                    $baners[] = $row3;
-                }
+    $baners = [];
+    while ($row3 = $fotos_query->fetch_assoc()) {
+        $baners[] = $row3;
+    }
 ?>
-            <br>
-            <div class="slider-container">
-            <div class="slider">
-            <div class="slide">
-                <?php foreach ($baners as $baner): ?>
-                <img src="<?php echo $baner['url']; ?>" alt="The Batman">
-                <div class="slide-info">
-                    <h3>Filme da Semana #1</h3>
-                    <h2><?php echo $baner['nome'] ?></h2>
-                </div>
+<div class="slider-container">
+    <div class="slider" id="slider">
+        <?php foreach ($baners as $baner): ?>
+        <div class="slide">
+            <img src="<?php echo $baner['url']; ?>" alt="The Batman">
+            <div class="slide-info">
+                <h3>Filme da Semana #1</h3>
+                <h2><?php echo $baner['nome'] ?></h2>
             </div>
-           <?php endforeach; ?>
-            <br>
         </div>
+        <?php endforeach; ?>
     </div>
+</div>
 <button id="prev">Anterior</button>
 <button id="next">Próximo</button>
         
