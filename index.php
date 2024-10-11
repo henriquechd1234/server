@@ -113,19 +113,19 @@
                     $baners[] = $row3;
                 }
 ?>
-                <br>
+            <br>
             <div class="slider-container">
             <div class="slider">
             <div class="slide">
                 <?php foreach ($baners as $baner): ?>
                 <img src="<?php echo $baner['url']; ?>" alt="The Batman">
-    <?php endforeach; ?>
+                <?php endforeach; ?>
                 <div class="slide-info">
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
                 </div>
-                <br>
             </div>
+            <br>
         </div>
     </div>
 
