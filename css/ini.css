@@ -148,29 +148,25 @@ body {
 }
 /* ------------------------------------CAUA MEXEU NESSE  CODIGO ------------------------------------------*/
 /* Carrossel */
-.slides-container {
-  position: relative;
-  max-width: 100%;
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 450px;
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.slide { 
-   max-width: 100%; /* Tamanho da imagem */
-    height: auto;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .slide img {
-   max-width: 100%; /* Tamanho da imagem */
-    height: auto; /* Mantém a proporção */
+    width: 100%;
+    height: auto;
 }
 /* ----------------------------------------------------------------------------------------------*/
 .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide-info {
@@ -193,28 +189,27 @@ body {
   margin: 5px 0 0 0;
 }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev {
-  left: 10px;
+#prev {
+    left: 10px;
 }
 
-.next {
-  right: 10px;
+#next {
+    right: 10px;
 }
 
 @media (max-width: 600px) {
