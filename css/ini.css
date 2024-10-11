@@ -146,23 +146,24 @@ body {
     max-height: 120px;
   }
 }
-
+/* ------------------------------------CAUA MEXEU NESSE  CODIGO ------------------------------------------*/
 /* Carrossel */
 .slides-container {
-    display: flex; /* Alinha os filhos em uma linha */
+    display: grid; /* Usa o grid layout */
+    grid-auto-flow: column; /* Coloca os itens em colunas */
     overflow-x: auto; /* Permite a rolagem horizontal */
-    white-space: nowrap; /* Evita que os filhos quebrem para a próxima linha */
 }
 
 .slide {
     margin-right: 20px; /* Espaço entre as imagens */
-    /* Defina uma largura para as imagens se necessário */
 }
 
 .slide img {
     max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
     height: auto; /* Mantém a proporção da imagem */
 }
+
+/* ----------------------------------------------------------------------------------------------*/
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
