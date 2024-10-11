@@ -123,11 +123,11 @@
                     <h3>Filme da Semana #1</h3>
                     <h2>AranhaVerso</h2>
                 </div>
+    <?php endforeach; ?>
                 <br>
             </div>
         </div>
     </div>
-    <?php endforeach; ?>
 
             
 
