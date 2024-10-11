@@ -149,18 +149,25 @@ body {
 /* ------------------------------------CAUA MEXEU NESSE  CODIGO ------------------------------------------*/
 /* Carrossel */
 .slides-container {
-    display: flex; /* Para exibição horizontal */
-    overflow-x: auto; /* Permite a rolagem horizontal */
-    white-space: nowrap; /* Impede a quebra de linha */
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 450px;
 }
 
-.slide {
-    margin-right: 20px; /* Espaçamento entre as imagens */
+.slide { 
+  min-width: 100%;
+  position: relative;
 }
 
 .slide img {
-    max-width: 100%; /* Tamanho da imagem */
-    height: auto; /* Mantém a proporção */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
 }
 /* ----------------------------------------------------------------------------------------------*/
 .slider {
