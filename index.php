@@ -125,9 +125,9 @@
                 </div>
                 <br>
             </div>
-    <?php endforeach; ?>
         </div>
     </div>
+    <?php endforeach; ?>
 
             
 
