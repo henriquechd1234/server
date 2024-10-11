@@ -71,7 +71,7 @@
                         echo '</div>';
                 }
             }
-        }else{
+        else{
           $code_filmes = "SELECT i.id, i.nome, i.descricao, i.foto, AVG(a.nota) AS media_avaliacao
                 FROM imagens i
                 JOIN avaliacao a ON i.id = a.imagens_id
@@ -122,7 +122,7 @@
         </div>
 <?php } ?>
     </div>
-    
+    <?php } ?>
             
 
 
