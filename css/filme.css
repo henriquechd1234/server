@@ -1,3 +1,7 @@
++5
+-5
+Original file line number	Original file line	Diff line number	Diff line change
+@@ -1,229 +1,229 @@
 @charset "UTF-8";
 /* Geral */
 * {
@@ -122,46 +126,7 @@ overflow: hidden;
 .info:hover {
   background-color: #ff7700;
 }
-/* --------------Texto no lado da foto ---------*/
-.movie-container {
-  display: flex;
-  flex-direction: row-reverse; /* Para colocar a imagem à esquerda e a descrição à direita */
-  justify-content: space-between; /* Espaçamento entre descrição e imagem */
-  align-items: flex-start; /* Alinha os itens no topo */
-  gap: 20px; /* Espaçamento entre imagem e descrição */
-}
 
-
-
-.movie-details {
-  flex: 2; /* A descrição ocupa o dobro do espaço da imagem */
-}
-
-.movie-poster img {
-  flex: 1; /* Define a largura da imagem */
-  max-width: 200px; /* Limite de tamanho da imagem */
-  height: auto; /* Mantém a proporção da imagem */
-}
-/* --------------------------------------*/
-/* ----------------Trailer ----------------- */
-
-.video-container {
-  margin-top: 30px; /* Espaço adicional entre o conteúdo e o vídeo */
-  width: 100%; /* O vídeo vai ocupar toda a largura disponível */
-  position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 para o vídeo */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* ---------------------------------- */
 /* Avaliações */
 .review-container {
   margin-top: 30px;
@@ -266,17 +231,3 @@ overflow: hidden;
   left: 0;
   width: 100%;
   height: 100%;
-}/*# sourceMappingURL=style.css.map */
-/* adicionando bglh no celular */
-  .movie-container {
-        display: flex;
-        flex-direction: column; /* Empilha a imagem e a descrição */
-        align-items: center; /* Centraliza o conteúdo */
-    }
-    .movie-details {
-        text-align: justify;
-        margin-top: 15px; /* Dá um espaço entre a imagem e o texto */
-    }
-    .movie-poster {
-        margin-bottom: 15px; /* Espaçamento abaixo da imagem */
-    }
