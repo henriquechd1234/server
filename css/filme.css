@@ -122,7 +122,24 @@ overflow: hidden;
 .info:hover {
   background-color: #ff7700;
 }
+/* Texto no lado da foto */
+.movie-container {
+  display: flex;
+  justify-content: space-between; /* Cria espaçamento entre descrição e imagem */
+  align-items: flex-start; /* Alinha pela parte superior */
+  gap: 20px; /* Espaçamento entre a descrição e a imagem */
+}
 
+.movie-details {
+  flex: 2; /* Aumenta o tamanho da descrição */
+}
+
+.movie-poster img {
+  flex: 1; /* Define a largura da imagem */
+  max-width: 200px; /* Limite de tamanho da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+/* ------------------*/
 /* Avaliações */
 .review-container {
   margin-top: 30px;
