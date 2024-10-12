@@ -236,7 +236,7 @@
   border: none;
   height: 2px;
   background-color: white;
-  margin: 5px 0;
+  margin: 3px 0;
 </style>
 
     <script src="js/ini.js"></script>
