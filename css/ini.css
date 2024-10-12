@@ -35,7 +35,7 @@ body {
   background-color: #0062cc;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar .login-btn {
     display: none;
   }
@@ -73,13 +73,13 @@ body {
   height: 20px;
 }
 
-@media (max-width: 768px) {
+@media screen and(max-width: 768px) {
   .search-container {
     max-width: 90%;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .navbar {
     flex-direction: row;
   }
@@ -133,7 +133,7 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .top-ten-section {
     padding: 10px;
   }
@@ -212,7 +212,7 @@ body {
     right: 10px;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .prev, .next {
     padding: 8px;
   }
@@ -258,7 +258,7 @@ h2 {
   border-radius: 5px;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .carousel-items {
     display: flex;
     flex-wrap: nowrap;
@@ -295,7 +295,7 @@ h2 {
   color: #FFD700; /* Dourado */
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .footer {
     padding: 15px;
   }
@@ -315,14 +315,14 @@ h2 {
         }
 
         /* Para dispositivos móveis */
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             .imagembanner {
                 width: 90%; 
             }
         }
 
         /* Para desktops */
-        @media (min-width: 769px) {
+        @media screen and (min-width: 769px) {
             .imagembanner {
                 width: 600px; 
             }
