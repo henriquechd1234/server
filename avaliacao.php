@@ -56,7 +56,23 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
     <main class="container">
         <?php 
         if(isset($_GET['busca']) && !empty($_GET['busca'])){
-            // Código de busca (sem alterações)
+            $procurar = '%' . $mysqli->real_escape_string($_GET['busca']) . '%';
+            $stmt = $mysqli->prepare("SELECT id, nome, descricao, foto FROM imagens WHERE nome LIKE ?");
+            $stmt->bind_param('s', $procurar);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if($result->num_rows === 0){
+                echo "<p style='color: white;'>Nenhum resultado encontrado no momento</p>";
+            } else {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="movie">';
+                    echo '<img src="' . $row['foto'] . '" alt="' . $row['nome'] . '" style="width:200px; height:auto;">';
+                    echo '<h2 style="color: white;">' . $row['nome'] . '</h2>';
+                    echo '<a class="info" href="avaliacao.php?id=' . $row['id'] . '">Mais Informações</a>';
+                    echo '</div>';
+                }
+            }
         } else if(isset($_GET['id']) && !empty($_GET['id'])) {
             $id = $_GET['id'];
             $stmt = $mysqli->prepare("SELECT * FROM imagens WHERE id = ?");
