@@ -237,28 +237,7 @@
   background-color: white;
   margin: 10px 0;
 
-.imagembanner {
-  display: block; 
-  max-width: 100%; 
-  height: auto; 
-  margin: 0 auto; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
 
-/* Para dispositivos móveis */
-@media (max-width: 768px) {
-  .imagembanner {
-    width: 90%; 
-  }
-}
-
-/* Para desktops */
-@media (min-width: 769px) {
-  .imagembanner {
-    width: 600px; 
-  }
-}
 </style>
 
     <script src="js/ini.js"></script>
