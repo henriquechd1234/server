@@ -82,8 +82,7 @@
             $sql_query = $mysqli -> query($code_filmes);
         ?>
         <div class="space"> <hr class= espacamento><div/>
-        
-        
+        <div><img src="img/=banner.png" alt="" class="imagembanner"></div>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
@@ -237,6 +236,29 @@
   height: 2px;
   background-color: white;
   margin: 10px 0;
+
+.imagembanner {
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 768px) {
+  .imagembanner {
+    width: 90%; 
+  }
+}
+
+/* Para desktops */
+@media (min-width: 769px) {
+  .imagembanner {
+    width: 600px; 
+  }
+}
 </style>
 
     <script src="js/ini.js"></script>
