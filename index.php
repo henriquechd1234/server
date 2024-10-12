@@ -40,7 +40,6 @@
 
             }else{
                 echo('<a style="text-decoration: none; color: aliceblue;" href="login.php">Login</a>');
-               
             }
         ?>
 
