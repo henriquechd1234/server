@@ -87,6 +87,7 @@
             }else {
                  echo '<div><img src="img/=banner.png" alt="" class="imagembanner"></div>';
             }
+                <button class="login-btn">Login</button>
                 ?>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
