@@ -128,7 +128,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
         echo '</main>'; // Fecha content
     }
 }
-
+?>
 
     </main>
 
