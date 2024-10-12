@@ -234,7 +234,7 @@
 
 .espacamento {
   border: none;
-  height: 2px;
+  height: 0px;
   background-color: white;
   margin: 0px 0;
 </style>
