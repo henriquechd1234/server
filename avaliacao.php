@@ -83,7 +83,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 if ($cal > 0) {
                     $media_nota = ($total_star / $total_ava) * 2;
                 }else{
-                    $media_nota = 000
+                    $media_nota = 000;
                         }
 
                
