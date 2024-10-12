@@ -130,6 +130,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 
     echo '</div>'; // Fecha container
 echo '</main>'; // Fecha content
+            }
         ?>
 
     </main>
