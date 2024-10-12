@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfinityHUB</title>
     <link rel="stylesheet" href="css/ini.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" a>
 
 </head>
