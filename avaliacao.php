@@ -81,8 +81,8 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 $total_star = $ava['media_nota'];
                 $cal =  $total_star -> num_rows;
                 if ($cal > 0) {
-                $media_nota = ($total_star / $total_ava) * 2;
-                } else {
+                    $media_nota = ($total_star / $total_ava) * 2;
+                }else {
                     $media_nota = 0
                         }
 
