@@ -57,82 +57,78 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
         <?php 
         if(isset($_GET['busca']) && !empty($_GET['busca'])){
             // Código de busca (sem alterações)
-        } else if(isset($_GET['id']) && !empty($_GET['id'])) {
-            $id = $_GET['id'];
-            $stmt = $mysqli->prepare("SELECT * FROM imagens WHERE id = ?");
-            $stmt->bind_param('i', $id);
-            $stmt->execute();
-            $result = $stmt->get_result();
+       } else if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $id = $_GET['id'];
+    $stmt = $mysqli->prepare("SELECT * FROM imagens WHERE id = ?");
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-           
+    if ($row = $result->fetch_assoc()) {
+        $total = "SELECT COUNT(*) AS total_avaliacoes, AVG(nota) AS media_nota
+            FROM avaliacao
+            WHERE imagens_id = ? ";
 
-        if($row = $result->fetch_assoc()){
-                  $total = "SELECT COUNT(*) AS total_avaliacoes, AVG(nota) AS media_nota
-                    FROM avaliacao
-                    WHERE imagens_id = ? ";
-                
-                $stmt_total = $mysqli->prepare($total);
-                $stmt_total->bind_param('i', $id); // Passando o ID corretamente
-                $stmt_total->execute();
-                $total_query = $stmt_total->get_result();
-                $ava = $total_query->fetch_assoc();
+        $stmt_total = $mysqli->prepare($total);
+        $stmt_total->bind_param('i', $id); // Passando o ID corretamente
+        $stmt_total->execute();
+        $total_query = $stmt_total->get_result();
+        $ava = $total_query->fetch_assoc();
 
-                $total_ava = $ava['total_avaliacoes'];   //aqui e a parte que pega as avaliações e as  notas  e isso ai pae e nois,vapo demaissssssssssssssssssssssssssssssssssssssssssssssssssss.
-                $total_star = $ava['media_nota'];
-                if ($total_star == 0) {
-                    $media_nota = 000;
-                }else{
-                    $media_nota = ($total_star / $total_ava) * 2;
-                  
-                        }
+        $total_ava = $ava['total_avaliacoes'];
+        $total_star = $ava['media_nota'];
+        
+        if ($total_star == 0) {
+            $media_nota = 0.00;
+        } else {
+            $media_nota = ($total_star / $total_ava) * 2;
+        }
 
-               
-                
-                $video_url = $row['trailer']; 
-                echo '<main class="content">';
-    echo '<div class="container">';
+        $video_url = $row['trailer']; 
+        echo '<main class="content">';
+        echo '<div class="container">';
 
-    // Cabeçalho do filme com o título e as avaliações
-    echo '<div class="movie-header">';
+        // Cabeçalho do filme com o título e as avaliações
+        echo '<div class="movie-header">';
         echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
         echo '<div class="rating">';
-            echo '<span>⭐'. number_format($media_nota, 2) . '</span>';
-            echo '<p>'. $total_ava.' avaliações</p>';
+        echo '<span>⭐'. number_format($media_nota, 2) . '</span>';
+        echo '<p>'. $total_ava.' avaliações</p>';
         echo '</div>';
-    echo '</div>'; // Fecha movie-header
+        echo '</div>'; // Fecha movie-header
 
-    // Container que agrupa a imagem e a descrição lado a lado
-    echo '<div class="movie-container">';
+        // Container que agrupa a imagem e a descrição lado a lado
+        echo '<div class="movie-container">';
         // Detalhes do filme (descrição, tempo de duração, diretor, elenco)
         echo '<div class="movie-details">';
-            echo '<p class="synopsis">' . $row['descricao'] . '</p>';
-            echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
-            echo '<p>Diretor: ' . $row['diretor'] . '</p>';
-            echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
+        echo '<p class="synopsis">' . $row['descricao'] . '</p>';
+        echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
+        echo '<p>Diretor: ' . $row['diretor'] . '</p>';
+        echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
         echo '</div>'; // Fecha movie-details
 
         // Poster do filme
         echo '<div class="movie-poster">';
-            echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
+        echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
         echo '</div>'; // Fecha movie-poster
-    echo '</div>'; // Fecha movie-container
+        echo '</div>'; // Fecha movie-container
 
-    echo '<br>';
-    echo '<hr>';
-    echo '<br>';
+        echo '<br>';
+        echo '<hr>';
+        echo '<br>';
 
-    // Exibir o vídeo (trailer) abaixo do conteúdo
-    if (!empty($video_url)) {
-        echo '<div class="video-container">';
+        // Exibir o vídeo (trailer) abaixo do conteúdo
+        if (!empty($video_url)) {
+            echo '<div class="video-container">';
             echo '<iframe src="' . $video_url . '" frameborder="0" allowfullscreen></iframe>';
-        echo '</div>'; // Fecha video-container
-    }
+            echo '</div>'; // Fecha video-container
+        }
 
-    echo '</div>'; // Fecha container
-echo '</main>'; // Fecha content
-        }
-        }
-        ?>
+        echo '</div>'; // Fecha container
+        echo '</main>'; // Fecha content
+    }
+}
+
 
     </main>
 
