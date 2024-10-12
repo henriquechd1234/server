@@ -41,6 +41,7 @@
 
             }else{
                 echo('<a style="text-decoration: none; color: aliceblue;" href="login.php">Login</a>');
+                echo '<div><img src="img/=banner.png" alt="" class="imagembanner"></div>';
             }
         ?>
 
@@ -83,7 +84,6 @@
             $sql_query = $mysqli -> query($code_filmes);
         ?>
         <div class="space"> <hr class= espacamento><div/>
-        <div><img src="img/=banner.png" alt="" class="imagembanner"></div>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
