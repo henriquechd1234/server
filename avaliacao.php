@@ -90,41 +90,46 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 
                 $video_url = $row['trailer']; 
                 echo '<main class="content">';
-                echo '<div class="container">';
-                echo '<div class="movie-header">';
-                echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
-                echo '<div class="rating">';
-                echo '<span>⭐'. number_format($media_nota, 2) . '</span>';
-                echo '<p>'. $total_ava.' avaliações</p>';
-                echo '</div>';
-                echo '</div>';
-                echo '<div class="movie-container">';
-                echo '<div class="movie-details">';
-                echo '<p class="synopsis">' . $row['descricao'] . '</p>';
-                echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
-                echo '<p>Diretor: ' . $row['diretor'] . '</p>';
-                echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
-                echo '</div>';
-                echo '<br>';
-                echo '<hr>';
-                echo '<br>';
-                echo '<div class="movie-content">';
-                echo '<div class="movie-poster">';
-                echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
-                echo '</div>';
-                 echo '<hr>';
-                echo '<br>';
-                if (!empty($video_url)) {
-                    echo '<div class="video-container">';
-                    echo '<iframe src="' . $video_url . '" frameborder="0" allowfullscreen></iframe>';
-                    echo '</div>';
-                }
-                echo '</div>';
-                echo '</div>';
-                echo '</main>'; 
-            } else {
-                echo 'Nenhum filme encontrado.';
-            }
+    echo '<div class="container">';
+
+    // Cabeçalho do filme com o título e as avaliações
+    echo '<div class="movie-header">';
+        echo '<h1 class="original-title">' . $row['nome'] . '</h1>';
+        echo '<div class="rating">';
+            echo '<span>⭐'. number_format($media_nota, 2) . '</span>';
+            echo '<p>'. $total_ava.' avaliações</p>';
+        echo '</div>';
+    echo '</div>'; // Fecha movie-header
+
+    // Container que agrupa a imagem e a descrição lado a lado
+    echo '<div class="movie-container">';
+        // Detalhes do filme (descrição, tempo de duração, diretor, elenco)
+        echo '<div class="movie-details">';
+            echo '<p class="synopsis">' . $row['descricao'] . '</p>';
+            echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
+            echo '<p>Diretor: ' . $row['diretor'] . '</p>';
+            echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
+        echo '</div>'; // Fecha movie-details
+
+        // Poster do filme
+        echo '<div class="movie-poster">';
+            echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
+        echo '</div>'; // Fecha movie-poster
+    echo '</div>'; // Fecha movie-container
+
+    echo '<br>';
+    echo '<hr>';
+    echo '<br>';
+
+    // Exibir o vídeo (trailer) abaixo do conteúdo
+    if (!empty($video_url)) {
+        echo '<div class="video-container">';
+            echo '<iframe src="' . $video_url . '" frameborder="0" allowfullscreen></iframe>';
+        echo '</div>'; // Fecha video-container
+    }
+
+    echo '</div>'; // Fecha container
+echo '</main>'; // Fecha content
         ?>
 
     </main>
