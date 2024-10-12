@@ -40,7 +40,7 @@
 
             }else{
                 echo('<a style="text-decoration: none; color: aliceblue;" href="login.php">Login</a>');
-                echo '<div><img src="img/=banner.png" alt="" class="imagembanner"></div>';
+               
             }
         ?>
 
@@ -81,7 +81,12 @@
                 LIMIT 10";
 
             $sql_query = $mysqli -> query($code_filmes);
-        ?>
+        ?> <?php if ($_SESSION == TRUE){
+            
+            }else {
+                 echo '<div><img src="img/=banner.png" alt="" class="imagembanner"></div>';
+            }
+                ?>
         <div class="space"> <hr class= espacamento><div/>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
