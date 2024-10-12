@@ -98,6 +98,13 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<p>'. $total_ava.' avaliações</p>';
                 echo '</div>';
                 echo '</div>';
+                echo '<div class="movie-details">';
+                echo '<p class="synopsis">' . $row['descricao'] . '</p>';
+                echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
+                echo '<p>Diretor: ' . $row['diretor'] . '</p>';
+                echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
+                echo '<p>Titulo Original: ' . $row['titulo_original'] . '</p>';
+                echo '</div>';
                 echo '<div class="movie-content">';
                 echo '<div class="movie-poster">';
                 echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
@@ -106,13 +113,6 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                     echo '<iframe src="' . $video_url . '" frameborder="0" allowfullscreen></iframe>';
                     echo '</div>';
                 }
-                echo '</div>';
-                echo '<div class="movie-details">';
-                echo '<p class="synopsis">' . $row['descricao'] . '</p>';
-                echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
-                echo '<p>Diretor: ' . $row['diretor'] . '</p>';
-                echo '<p>Elenco Principal: ' . $row['elenco_principal'] . '</p>';
-                echo '<p>Titulo Original: ' . $row['titulo_original'] . '</p>';
                 echo '</div>';
                 echo '</div>';
                 echo '</main>'; 
