@@ -66,7 +66,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 
            
 
-        }if($row = $result->fetch_assoc()){
+        if($row = $result->fetch_assoc()){
                   $total = "SELECT COUNT(*) AS total_avaliacoes, AVG(nota) AS media_nota
                     FROM avaliacao
                     WHERE imagens_id = ? ";
@@ -130,7 +130,8 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 
     echo '</div>'; // Fecha container
 echo '</main>'; // Fecha content
-            
+        }
+        }
         ?>
 
     </main>
