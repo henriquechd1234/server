@@ -98,6 +98,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<p>'. $total_ava.' avaliações</p>';
                 echo '</div>';
                 echo '</div>';
+                echo '<div class="movie-container">';
                 echo '<div class="movie-details">';
                 echo '<p class="synopsis">' . $row['descricao'] . '</p>';
                 echo '<p>Tempo de duração: ' . $row['tempo_de_filme'] . '</p>';
@@ -110,6 +111,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-content">';
                 echo '<div class="movie-poster">';
                 echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
+                echo '</div>';
                  echo '<hr>';
                 echo '<br>';
                 if (!empty($video_url)) {
