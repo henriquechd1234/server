@@ -111,6 +111,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 echo '<div class="movie-poster">';
                 echo '<img src="' . $row['foto'] . '" alt="Poster do filme Coringa" style="max-width: 200px;">';
                  echo '<hr>';
+                echo '<br>';
                 if (!empty($video_url)) {
                     echo '<div class="video-container">';
                     echo '<iframe src="' . $video_url . '" frameborder="0" allowfullscreen></iframe>';
