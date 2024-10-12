@@ -80,14 +80,15 @@
                 LIMIT 10";
 
             $sql_query = $mysqli -> query($code_filmes);
-        <div class="space"> <hr class= espacamento><div/>
-        ?> <?php if ($_SESSION == TRUE){
+        ?> 
+            <?php if ($_SESSION == TRUE){
             
             }else {
                  echo '<div><img src="img/=banner.png" alt="" class="imagembanner"></div>';
                  echo  '<div><button class="login-btn">Login</button><div/>';
             }
                 ?>
+        <div class="space"> <hr class= espacamento><div/>
         <div class="top-ten-section">
             <h2 class="styletext">Top 10 no InfinityHUB!</h2>
             <div class="top-ten-container">
