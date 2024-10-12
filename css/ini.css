@@ -35,6 +35,16 @@ body {
   background-color: #0062cc;
 }
 
+.login-btn {
+  background-color: rgba(58, 48, 48, 0.7960784314);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; }
+
 @media screen and (max-width: 768px) {
   .navbar .login-btn {
     display: none;
