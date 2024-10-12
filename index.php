@@ -160,8 +160,8 @@
 
 <footer class="footer">
   <div class="footer-content">
-    <p>&copy; 2024 David Martins e Caua Henrique. Todos os direitos reservados.</p>
-    <p>Desenvolvido por <strong>Pinova</strong></p>
+    <p> Todos os direitos reservados a <strong>Pinova</strong></p>
+    <p>&copy; Desenvolvido por David Martins e Caua Henrique. </p>
   </div>
 </footer>
 
