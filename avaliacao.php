@@ -80,10 +80,11 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
                 $total_ava = $ava['total_avaliacoes'];   //aqui e a parte que pega as avaliações e as  notas  e isso ai pae e nois,vapo demaissssssssssssssssssssssssssssssssssssssssssssssssssss.
                 $total_star = $ava['media_nota'];
                 $cal =  $total_star -> num_rows;
-                if ($cal > 0) {
-                    $media_nota = ($total_star / $total_ava) * 2;
+                if ($cal == 0) {
+                    $media_nota = 000
                 }else{
-                    $media_nota = 000;
+                    $media_nota = ($total_star / $total_ava) * 2;
+                  
                         }
 
                
