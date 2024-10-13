@@ -48,7 +48,9 @@
 
 @media screen and (max-width: 768px) {
   .navbar .login-btn {
-    display: none;
+    display: block; /* Altere de 'none' para 'block' */
+    width: 100%; /* Faz o botão ocupar toda a largura da navbar */
+    margin-top: 10px; /* Adiciona um espaço em cima do botão, se necessário */
   }
 }
 
