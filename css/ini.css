@@ -350,35 +350,46 @@ html, body {
   box-sizing: border-box;
 }
 /* Estilos gerais para o botão de login */
+.navbar {
+    display: flex; /* Alinha itens em linha */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px; /* Espaçamento ao redor da barra de navegação */
+    background-color: #141313; /* Cor de fundo da navbar */
+}
+
+.search-container {
+    display: flex; /* Alinha a barra de pesquisa e o botão em linha */
+    flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço disponível */
+    margin-right: 10px; /* Espaço entre a barra de pesquisa e o botão de login */
+}
+
 .login-btn {
-    background-color: #FFD700; /* Dourado */
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #555; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do texto */
+    display: inline-block; /* Faz com que o botão se comporte como um bloco */
 }
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 600px) {
-    .login-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-        width: 100%; /* Faz o botão ocupar toda a largura */
-        text-align: center; /* Centraliza o texto */
-    }
-
-    /* Adiciona espaçamento ao redor do botão no mobile */
     .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: flex-start; /* Alinha à esquerda */
     }
 
-    /* Ajusta outros elementos da navbar se necessário */
     .search-container {
-        margin-bottom: 10px;
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 10px; /* Espaço abaixo da barra de pesquisa */
+    }
+
+    .login-btn {
+        width: 100%; /* Botão ocupa toda a largura */
+        margin-top: 10px; /* Espaço acima do botão */
     }
 }
+
 
