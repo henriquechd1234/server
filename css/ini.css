@@ -63,6 +63,7 @@ body {
   width: 100%; /* Faz a barra de pesquisa ocupar toda a largura possível */
   background-color: #f9f9f9;
   margin: 0 auto; /* Centralizando a barra de pesquisa */
+   box-sizing: border-box;
 }
 
 .search-container input[type="text"] {
@@ -344,4 +345,7 @@ h2 {
 }
 html, body {
   overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
 }
