@@ -36,10 +36,10 @@
             }
             if ($_SESSION == TRUE){
 
-             echo ('<a style="text-decoration: none; color: aliceblue;" href="desconectar.php"><span>Sair</span></a>');
+             echo ('<div> <a style="text-decoration: none;" href="desconectar.php" <button class="login-btn"> Sair </button> </a>  <div/>');
 
             }else{
-                echo('<div>'. '<a href="login.php">' . '<button class="login-btn">  Criar uma conta </button> </a> <div/>');
+                echo('<div>'. '<a href="login.php"  style="text-decoration: none;">' . '<button class="login-btn">  Criar uma conta </button> </a> <div/>');
             }
         ?>
 
