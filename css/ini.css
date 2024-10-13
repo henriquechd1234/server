@@ -1,3 +1,6 @@
++4
+Original file line number	Original file line	Diff line number	Diff line change
+@@ -1,347 +1,351 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -349,47 +352,3 @@ html, body {
 * {
   box-sizing: border-box;
 }
-/* Estilos gerais para o botão de login */
-.navbar {
-    display: flex; /* Alinha itens em linha */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 10px; /* Espaçamento ao redor da barra de navegação */
-    background-color: #141313; /* Cor de fundo da navbar */
-}
-
-.search-container {
-    display: flex; /* Alinha a barra de pesquisa e o botão em linha */
-    flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço disponível */
-    margin-right: 10px; /* Espaço entre a barra de pesquisa e o botão de login */
-}
-
-.login-btn {
-    background-color: #555; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    padding: 10px 15px; /* Espaçamento interno */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove sublinhado do texto */
-    display: inline-block; /* Faz com que o botão se comporte como um bloco */
-}
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column; /* Coloca os itens em coluna */
-        align-items: flex-start; /* Alinha à esquerda */
-    }
-
-    .search-container {
-        width: 100%; /* Ocupa toda a largura */
-        margin-bottom: 10px; /* Espaço abaixo da barra de pesquisa */
-    }
-
-    .login-btn {
-        width: 100%; /* Botão ocupa toda a largura */
-        margin-top: 10px; /* Espaço acima do botão */
-    }
-}
-
-
