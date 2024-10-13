@@ -30,6 +30,7 @@ body{
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 16px;
+  text-decoration: none; /* Remove o sublinhado */
 }
 
 .navbar .login-btn:hover {
@@ -51,6 +52,7 @@ body{
     display: block; /* Altere de 'none' para 'block' */
     width: 100%; /* Faz o botão ocupar toda a largura da navbar */
     margin-top: 10px; /* Adiciona um espaço em cima do botão, se necessário */
+    text-decoration: none; /* Remove o sublinhado */
   }
 }
 
