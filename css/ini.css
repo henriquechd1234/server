@@ -342,3 +342,6 @@ h2 {
 .navbar, .search-container, .top-ten-section {
    max-width: 100%;
 }
+html, body {
+  overflow-x: hidden;
+}
