@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #141313;
   color: white;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -83,7 +84,7 @@ body {
   height: 20px;
 }
 
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
   .search-container {
     max-width: 90%;
   }
@@ -273,6 +274,7 @@ h2 {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+      width: 100%; /* Garante que não ultrapasse a largura do dispositivo */
   }
 
   .item {
@@ -337,3 +339,6 @@ h2 {
                 width: 600px; 
             }
         }
+.navbar, .search-container, .top-ten-section {
+   max-width: 100%;
+}
