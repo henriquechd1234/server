@@ -39,7 +39,7 @@
              echo ('<a style="text-decoration: none; color: aliceblue;" href="desconectar.php"><span>Sair</span></a>');
 
             }else{
-                echo('<div>'. '<a href="login.php">' . '<button class="login-btn">  Login </button> </a> <div/>');
+                echo('<div>'. '<a href="login.php">' . '<button class="login-btn">  Criar uma conta </button> </a> <div/>');
             }
         ?>
 
