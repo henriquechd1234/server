@@ -349,3 +349,36 @@ html, body {
 * {
   box-sizing: border-box;
 }
+/* Estilos gerais para o botão de login */
+.login-btn {
+    background-color: #FFD700; /* Dourado */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+    .login-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%; /* Faz o botão ocupar toda a largura */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Adiciona espaçamento ao redor do botão no mobile */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajusta outros elementos da navbar se necessário */
+    .search-container {
+        margin-bottom: 10px;
+    }
+}
+
