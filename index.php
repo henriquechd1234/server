@@ -156,7 +156,7 @@
           <img src="https://img.odcdn.com.br/wp-content/uploads/2024/03/Destaque-Duna-2021.jpg" alt="Filme 3">
           <h3>Dune 2</h3>
           <span>Recomendado por: Cauã Henrique</span>
-          <p>Filmaço da porra!</p>
+          <p>Muito bom esse filme, melhor filme que eu ja assisti</p>
         </div>
       </div>
     </div>
