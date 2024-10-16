@@ -175,7 +175,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             }
         }if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
             if (!isset($_SESSION['id'])) {
-                echo "Usuário não está logado. Por favor, faça login.";
+                echo "Usuário não está logado. Por favor, faça o login ou crie uma conta.";
 
             }
 
