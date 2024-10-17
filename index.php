@@ -165,7 +165,7 @@
 
 <footer class="footer">
   <div class="footer-content">
- <a href="cred.html"> <div  <p> Todos os direitos reservados a <strong>Pinova</strong></p>
+ <a class="resolver" href="cred.html"> <div  <p> Todos os direitos reservados a <strong>Pinova</strong></p>
  <p>&copy; Desenvolvido por David Martins e Caua Henrique. </p> <div/> <a/>
   </div>
 </footer>
@@ -243,6 +243,9 @@
   background-color: white;
   margin: 10px 0;
 
+.resolver {
+    text-decoration: none;
+}
 
 </style>
 
