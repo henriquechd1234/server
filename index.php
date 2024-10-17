@@ -221,6 +221,7 @@
 .footer-content p {
   margin: 5px 0;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .footer-content strong {
