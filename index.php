@@ -165,8 +165,8 @@
 
 <footer class="footer">
   <div class="footer-content">
-    <p> Todos os direitos reservados a <strong>Pinova</strong></p>
-    <p>&copy; Desenvolvido por David Martins e Caua Henrique. </p>
+ <a href="cred.html"> <div  <p> Todos os direitos reservados a <strong>Pinova</strong></p>
+ <p>&copy; Desenvolvido por David Martins e Caua Henrique. </p> <div/> <a/>
   </div>
 </footer>
 
