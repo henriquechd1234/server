@@ -246,7 +246,13 @@
 
 .resolver {
     text-decoration: none;
+    color: white; /* Define a cor do link para branco, ou outra cor que combine com o rodapé */
 }
+
+.resolver:hover {
+    color: #FFD700; /* Adiciona um efeito ao passar o mouse, opcional */
+}
+
 
 </style>
 
