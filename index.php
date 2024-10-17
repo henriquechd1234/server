@@ -211,7 +211,6 @@
 }
 .footer {
   background-color: #141313;
-  color: white;
   text-align: center;
   padding: 20px 10px;
   position: relative;
