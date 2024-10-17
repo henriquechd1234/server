@@ -145,7 +145,7 @@ if (isset($_POST['avaliacao']) && !empty($_POST['avaliacao'])) {
 
     <!-- Formulário de avaliação -->
     <div class="review-container">
-        <h1> Certifique de estar logado antes de avaliar </h1>
+        <h2> Certifique de estar logado antes de avaliar </h2>
         <h2>Deixe sua avaliação:</h2>
         <form action="" method="POST">
             <label for="avaliacao">Comentário:</label>
