@@ -126,8 +126,8 @@
             <img src="<?php echo $baner['url']; ?>" alt="The Batman">
             <div class="slide-info">
                 
-                <h2>Filme da Semana: ></h2>
-                <h2>Homem Aranha: No aranha Verso ></h2>
+                <h2>Filme da Semana: </h2>
+                <h2>Homem Aranha: No aranha Verso </h2>
             </div>
         </div>
         <?php endforeach; ?>
